@@ -25,7 +25,7 @@ class CompanyController extends GetxController {
     {'name': 'Restaurant', 'image': 'assets/Categories/restaurant.png'},
     {'name': 'Hotels', 'image': 'assets/Categories/hotel.png'},
     {'name': 'Tourisme', 'image': 'assets/Categories/tourisme.png'},
-    {'name': 'Doctors', 'image': 'assets/Categories/hospital.png'},
+    {'name': 'Hospitals', 'image': 'assets/Categories/hospital.png'},
     {'name': 'Stores', 'image': 'assets/Categories/store.png'},
     {'name': 'Cosmetics', 'image': 'assets/Categories/cosmetics.png'},
     {'name': 'Clothes', 'image': 'assets/Categories/clothes.png'},
