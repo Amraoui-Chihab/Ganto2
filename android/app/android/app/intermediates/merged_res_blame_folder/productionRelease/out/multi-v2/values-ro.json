@@ -1,0 +1,111 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.example.ganto_shop.app-mergeProductionReleaseResources-54:/values-ro/values-ro.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Chihab\\.gradle\\caches\\transforms-3\\bbd4e48a6bc3b708a8e407614801ef10\\transformed\\jetified-scanplus-2.1.0.300\\res\\values-ro\\values-ro.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,102,180,242,311,379,434,493",
+                        "endColumns": "46,77,61,68,67,54,58,49",
+                        "endOffsets": "97,175,237,306,374,429,488,538"
+                    },
+                    "to": {
+                        "startLines": "49,50,51,52,53,54,55,56",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "4644,4691,4769,4831,4900,4968,5023,5082",
+                        "endColumns": "46,77,61,68,67,54,58,49",
+                        "endOffsets": "4686,4764,4826,4895,4963,5018,5077,5127"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Chihab\\.gradle\\caches\\transforms-3\\a56752d9ebd382fd9ff434f699e13436\\transformed\\core-1.13.1\\res\\values-ro\\values-ro.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,153,255,355,454,556,665,782",
+                        "endColumns": "97,101,99,98,101,108,116,100",
+                        "endOffsets": "148,250,350,449,551,660,777,878"
+                    },
+                    "to": {
+                        "startLines": "29,30,31,32,33,34,35,58",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "2851,2949,3051,3151,3250,3352,3461,5216",
+                        "endColumns": "97,101,99,98,101,108,116,100",
+                        "endOffsets": "2944,3046,3146,3245,3347,3456,3573,5312"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Chihab\\.gradle\\caches\\transforms-3\\4dfc325d16d7836785ceb4df93e490dc\\transformed\\preference-1.2.1\\res\\values-ro\\values-ro.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "105,176,262,337,476,645,732",
+                        "endColumns": "70,85,74,138,168,86,80",
+                        "endOffsets": "171,257,332,471,640,727,808"
+                    },
+                    "to": {
+                        "startLines": "36,46,47,48,59,60,61",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "3578,4344,4430,4505,5317,5486,5573",
+                        "endColumns": "70,85,74,138,168,86,80",
+                        "endOffsets": "3644,4425,4500,4639,5481,5568,5649"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Chihab\\.gradle\\caches\\transforms-3\\1fc30ea5ca7e0377ad62393facfaa9b0\\transformed\\appcompat-1.6.1\\res\\values-ro\\values-ro.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,226,330,443,527,631,752,837,917,1008,1101,1196,1290,1390,1483,1578,1672,1763,1855,1938,2050,2158,2258,2372,2478,2584,2748,2851",
+                        "endColumns": "120,103,112,83,103,120,84,79,90,92,94,93,99,92,94,93,90,91,82,111,107,99,113,105,105,163,102,83",
+                        "endOffsets": "221,325,438,522,626,747,832,912,1003,1096,1191,1285,1385,1478,1573,1667,1758,1850,1933,2045,2153,2253,2367,2473,2579,2743,2846,2930"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,57",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,226,330,443,527,631,752,837,917,1008,1101,1196,1290,1390,1483,1578,1672,1763,1855,1938,2050,2158,2258,2372,2478,2584,2748,5132",
+                        "endColumns": "120,103,112,83,103,120,84,79,90,92,94,93,99,92,94,93,90,91,82,111,107,99,113,105,105,163,102,83",
+                        "endOffsets": "221,325,438,522,626,747,832,912,1003,1096,1191,1285,1385,1478,1573,1667,1758,1850,1933,2045,2153,2253,2367,2473,2579,2743,2846,5211"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Chihab\\.gradle\\caches\\transforms-3\\a36ca7a0f9ada061d52968f8f8ddee49\\transformed\\jetified-media3-exoplayer-1.4.1\\res\\values-ro\\values-ro.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,136,198,263,335,413,493,583,676",
+                        "endColumns": "80,61,64,71,77,79,89,92,73",
+                        "endOffsets": "131,193,258,330,408,488,578,671,745"
+                    },
+                    "to": {
+                        "startLines": "37,38,39,40,41,42,43,44,45",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "3649,3730,3792,3857,3929,4007,4087,4177,4270",
+                        "endColumns": "80,61,64,71,77,79,89,92,73",
+                        "endOffsets": "3725,3787,3852,3924,4002,4082,4172,4265,4339"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Chihab\\.gradle\\caches\\transforms-3\\4c6f9add71608a5b0b8f79d7d6bd2843\\transformed\\jetified-zxing-android-embedded-4.3.0\\res\\values-ro\\values-ro.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,114,166,275",
+                        "endColumns": "58,51,108,116",
+                        "endOffsets": "109,161,270,387"
+                    },
+                    "to": {
+                        "startLines": "62,63,64,65",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "5654,5713,5765,5874",
+                        "endColumns": "58,51,108,116",
+                        "endOffsets": "5708,5760,5869,5986"
+                    }
+                }
+            ]
+        }
+    ]
+}

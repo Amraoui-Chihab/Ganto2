@@ -1,0 +1,35 @@
+<variant
+    name="developmentRelease"
+    package="com.example.ganto_shop"
+    minSdkVersion="21"
+    targetSdkVersion="35"
+    mergedManifest="android\app\intermediates\merged_manifest\developmentRelease\AndroidManifest.xml"
+    manifestMergeReport="android\app\outputs\logs\manifest-merger-development-release-report.txt"
+    proguardFiles="android\app\intermediates\default_proguard_files\global\proguard-android-optimize.txt-8.1.0;C:\dev\flutter\packages\flutter_tools\gradle\flutter_proguard_rules.pro;proguard-rules.pro;android\app\intermediates\default_proguard_files\global\proguard-android.txt-8.1.0;proguard-rules.pro"
+    partialResultsDir="android\app\intermediates\lint_vital_partial_results\developmentRelease\out">
+  <buildFeatures
+      namespacing="REQUIRED"/>
+  <sourceProviders>
+    <sourceProvider
+        manifests="src\main\AndroidManifest.xml"
+        javaDirectories="src\main\java;src\development\java;src\release\java;src\developmentRelease\java;src\main\kotlin;src\development\kotlin;src\release\kotlin;src\developmentRelease\kotlin"
+        resDirectories="src\main\res;src\development\res;src\release\res;src\developmentRelease\res"
+        assetsDirectories="src\main\assets;src\development\assets;src\release\assets;src\developmentRelease\assets"/>
+  </sourceProviders>
+  <testSourceProviders>
+  </testSourceProviders>
+  <testFixturesSourceProviders>
+  </testFixturesSourceProviders>
+  <manifestPlaceholders>
+    <placeholder
+        name="applicationName"
+        value="android.app.Application" />
+  </manifestPlaceholders>
+  <mainArtifact
+      classOutputs="android\app\intermediates\javac\developmentRelease\classes;android\app\tmp\kotlin-classes\developmentRelease;android\app\kotlinToolingMetadata;android\app\intermediates\compile_and_runtime_not_namespaced_r_class_jar\developmentRelease\R.jar"
+      applicationId="com.example.ganto_shop"
+      generatedSourceFolders="android\app\generated\ap_generated_sources\developmentRelease\out"
+      generatedResourceFolders="android\app\generated\res\resValues\development\release"
+      desugaredMethodsFiles="C:\Users\Chihab\.gradle\caches\transforms-3\84a41085b9a58bdb6e09a333efcf39cd\transformed\D8BackportedDesugaredMethods.txt">
+  </mainArtifact>
+</variant>

@@ -1,0 +1,2 @@
+C:/Users/Chihab/Desktop/Ganto Project/ganto_shop/android/app/.cxx/Debug/4h5m1g1l/x86/CMakeFiles/edit_cache.dir
+C:/Users/Chihab/Desktop/Ganto Project/ganto_shop/android/app/.cxx/Debug/4h5m1g1l/x86/CMakeFiles/rebuild_cache.dir

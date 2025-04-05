@@ -1,0 +1,19 @@
+<lint-module
+    format="1"
+    dir="C:\Users\Chihab\Desktop\Ganto Project\ganto_shop\android\app"
+    name=":app"
+    type="APP"
+    maven="android:app:"
+    agpVersion="8.1.0"
+    buildFolder="android\app"
+    bootClassPath="C:\Users\Chihab\AppData\Local\Android\sdk\platforms\android-34\android.jar;C:\Users\Chihab\AppData\Local\Android\sdk\build-tools\34.0.0\core-lambda-stubs.jar"
+    javaSourceLevel="1.8"
+    compileTarget="android-34"
+    neverShrinking="true">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="productionRelease"/>
+</lint-module>

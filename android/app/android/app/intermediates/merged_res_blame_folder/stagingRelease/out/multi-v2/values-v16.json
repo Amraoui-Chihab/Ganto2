@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.example.ganto_shop.app-mergeStagingReleaseResources-54:/values-v16/values-v16.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Chihab\\.gradle\\caches\\transforms-3\\1fc30ea5ca7e0377ad62393facfaa9b0\\transformed\\appcompat-1.6.1\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "223"
+                    }
+                }
+            ]
+        }
+    ]
+}

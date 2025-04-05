@@ -1,0 +1,61 @@
+com.example.ganto_shop.app-jetified-core-ktx-1.13.1-0 C:\Users\Chihab\.gradle\caches\transforms-3\095154766321849bf3f6f133ccf57a6c\transformed\jetified-core-ktx-1.13.1\res
+com.example.ganto_shop.app-coordinatorlayout-1.0.0-1 C:\Users\Chihab\.gradle\caches\transforms-3\0f2991c7ebccf062df284da9de3c2e64\transformed\coordinatorlayout-1.0.0\res
+com.example.ganto_shop.app-jetified-savedstate-ktx-1.2.1-2 C:\Users\Chihab\.gradle\caches\transforms-3\19b3d57f0ee3bd2d7c335c1a84ca4f9a\transformed\jetified-savedstate-ktx-1.2.1\res
+com.example.ganto_shop.app-slidingpanelayout-1.2.0-3 C:\Users\Chihab\.gradle\caches\transforms-3\1fb5624ecdbe8a81697c457568d2d3a4\transformed\slidingpanelayout-1.2.0\res
+com.example.ganto_shop.app-appcompat-1.6.1-4 C:\Users\Chihab\.gradle\caches\transforms-3\1fc30ea5ca7e0377ad62393facfaa9b0\transformed\appcompat-1.6.1\res
+com.example.ganto_shop.app-jetified-fragment-ktx-1.7.1-5 C:\Users\Chihab\.gradle\caches\transforms-3\209ab11e5a5690e591b4afe44acde760\transformed\jetified-fragment-ktx-1.7.1\res
+com.example.ganto_shop.app-jetified-lifecycle-livedata-core-ktx-2.7.0-6 C:\Users\Chihab\.gradle\caches\transforms-3\25bb1e32154ccd9106f0f32df2ffa5f9\transformed\jetified-lifecycle-livedata-core-ktx-2.7.0\res
+com.example.ganto_shop.app-jetified-emoji2-1.2.0-7 C:\Users\Chihab\.gradle\caches\transforms-3\31953f4fdf3512387c64e90e9982e758\transformed\jetified-emoji2-1.2.0\res
+com.example.ganto_shop.app-jetified-activity-1.9.3-8 C:\Users\Chihab\.gradle\caches\transforms-3\35cfa20d2ebbcbf63552e8c12b258211\transformed\jetified-activity-1.9.3\res
+com.example.ganto_shop.app-jetified-datastore-preferences-release-9 C:\Users\Chihab\.gradle\caches\transforms-3\3fcec685c4fa355bc069e7f3fb919e8d\transformed\jetified-datastore-preferences-release\res
+com.example.ganto_shop.app-jetified-window-java-1.2.0-10 C:\Users\Chihab\.gradle\caches\transforms-3\40efdf62a069394415c7423981fbe242\transformed\jetified-window-java-1.2.0\res
+com.example.ganto_shop.app-fragment-1.7.1-11 C:\Users\Chihab\.gradle\caches\transforms-3\4113d2a5a8a6d1d10cb890c1fe26ea17\transformed\fragment-1.7.1\res
+com.example.ganto_shop.app-jetified-emoji2-views-helper-1.2.0-12 C:\Users\Chihab\.gradle\caches\transforms-3\47b2bab7bbc2a4d3496f529d07ee9cce\transformed\jetified-emoji2-views-helper-1.2.0\res
+com.example.ganto_shop.app-jetified-zxing-android-embedded-4.3.0-13 C:\Users\Chihab\.gradle\caches\transforms-3\4c6f9add71608a5b0b8f79d7d6bd2843\transformed\jetified-zxing-android-embedded-4.3.0\res
+com.example.ganto_shop.app-preference-1.2.1-14 C:\Users\Chihab\.gradle\caches\transforms-3\4dfc325d16d7836785ceb4df93e490dc\transformed\preference-1.2.1\res
+com.example.ganto_shop.app-jetified-lifecycle-viewmodel-ktx-2.7.0-15 C:\Users\Chihab\.gradle\caches\transforms-3\5de3ea44d4f94bfcabb6c023c196aea6\transformed\jetified-lifecycle-viewmodel-ktx-2.7.0\res
+com.example.ganto_shop.app-recyclerview-1.0.0-16 C:\Users\Chihab\.gradle\caches\transforms-3\73f2469952cb850005e7da9de817412e\transformed\recyclerview-1.0.0\res
+com.example.ganto_shop.app-lifecycle-livedata-core-2.7.0-17 C:\Users\Chihab\.gradle\caches\transforms-3\7731b9dfb691386af32c7593c0d3b290\transformed\lifecycle-livedata-core-2.7.0\res
+com.example.ganto_shop.app-jetified-datastore-release-18 C:\Users\Chihab\.gradle\caches\transforms-3\79c8a7691edf2ba881891d19b314c912\transformed\jetified-datastore-release\res
+com.example.ganto_shop.app-jetified-core-1.0.0-19 C:\Users\Chihab\.gradle\caches\transforms-3\7f7985e870122f83d16f3166db0ff20d\transformed\jetified-core-1.0.0\res
+com.example.ganto_shop.app-jetified-appcompat-resources-1.6.1-20 C:\Users\Chihab\.gradle\caches\transforms-3\86c72c41b9a74c4891c6c52a96e2d65d\transformed\jetified-appcompat-resources-1.6.1\res
+com.example.ganto_shop.app-jetified-activity-ktx-1.9.3-21 C:\Users\Chihab\.gradle\caches\transforms-3\88b70980ad9871050a0b1c3a23590d41\transformed\jetified-activity-ktx-1.9.3\res
+com.example.ganto_shop.app-jetified-startup-runtime-1.1.1-22 C:\Users\Chihab\.gradle\caches\transforms-3\8b19bfc4cb274d0163e0f6c65b937ae9\transformed\jetified-startup-runtime-1.1.1\res
+com.example.ganto_shop.app-lifecycle-livedata-2.7.0-23 C:\Users\Chihab\.gradle\caches\transforms-3\8cc0567d9860da5ca7c98c6c93e04559\transformed\lifecycle-livedata-2.7.0\res
+com.example.ganto_shop.app-jetified-lifecycle-viewmodel-savedstate-2.7.0-24 C:\Users\Chihab\.gradle\caches\transforms-3\9d90e8b31a52d0cdfdef01656302c2f1\transformed\jetified-lifecycle-viewmodel-savedstate-2.7.0\res
+com.example.ganto_shop.app-jetified-profileinstaller-1.3.1-25 C:\Users\Chihab\.gradle\caches\transforms-3\a0d2a77580c98966a798f6526f364588\transformed\jetified-profileinstaller-1.3.1\res
+com.example.ganto_shop.app-jetified-window-1.2.0-26 C:\Users\Chihab\.gradle\caches\transforms-3\a0ed2474e9617e02c3727ddf656b38d6\transformed\jetified-window-1.2.0\res
+com.example.ganto_shop.app-jetified-media3-exoplayer-1.4.1-27 C:\Users\Chihab\.gradle\caches\transforms-3\a36ca7a0f9ada061d52968f8f8ddee49\transformed\jetified-media3-exoplayer-1.4.1\res
+com.example.ganto_shop.app-core-1.13.1-28 C:\Users\Chihab\.gradle\caches\transforms-3\a56752d9ebd382fd9ff434f699e13436\transformed\core-1.13.1\res
+com.example.ganto_shop.app-jetified-scanplus-2.1.0.300-29 C:\Users\Chihab\.gradle\caches\transforms-3\bbd4e48a6bc3b708a8e407614801ef10\transformed\jetified-scanplus-2.1.0.300\res
+com.example.ganto_shop.app-core-runtime-2.2.0-30 C:\Users\Chihab\.gradle\caches\transforms-3\c24fa20c509240e8d70407362f153ed3\transformed\core-runtime-2.2.0\res
+com.example.ganto_shop.app-lifecycle-runtime-2.7.0-31 C:\Users\Chihab\.gradle\caches\transforms-3\c4af5a1c09ac530efddb876175485422\transformed\lifecycle-runtime-2.7.0\res
+com.example.ganto_shop.app-lifecycle-viewmodel-2.7.0-32 C:\Users\Chihab\.gradle\caches\transforms-3\c4e79b21fd998076ed5abcbed7fb6db5\transformed\lifecycle-viewmodel-2.7.0\res
+com.example.ganto_shop.app-jetified-lifecycle-process-2.7.0-33 C:\Users\Chihab\.gradle\caches\transforms-3\d00d7b43ef5b13886ad149e7de25b0cf\transformed\jetified-lifecycle-process-2.7.0\res
+com.example.ganto_shop.app-jetified-savedstate-1.2.1-34 C:\Users\Chihab\.gradle\caches\transforms-3\d83e7b9c5efb53348652a36c762a0a8c\transformed\jetified-savedstate-1.2.1\res
+com.example.ganto_shop.app-jetified-datastore-core-release-35 C:\Users\Chihab\.gradle\caches\transforms-3\e00d1b91a39c8180e0eddf28b07b8580\transformed\jetified-datastore-core-release\res
+com.example.ganto_shop.app-transition-1.4.1-36 C:\Users\Chihab\.gradle\caches\transforms-3\f00c98f63d6b994213f0ef7b9d2a24b0\transformed\transition-1.4.1\res
+com.example.ganto_shop.app-jetified-network-common-4.0.20.301-37 C:\Users\Chihab\.gradle\caches\transforms-3\f1d007e0a14a0d06bae540e5f59f1252\transformed\jetified-network-common-4.0.20.301\res
+com.example.ganto_shop.app-jetified-lifecycle-runtime-ktx-2.7.0-38 C:\Users\Chihab\.gradle\caches\transforms-3\f37936fc4e3a48db90b8cc5e653e2e35\transformed\jetified-lifecycle-runtime-ktx-2.7.0\res
+com.example.ganto_shop.app-jetified-annotation-experimental-1.4.0-39 C:\Users\Chihab\.gradle\caches\transforms-3\f4c9417c6d44f800921bd633ba09545c\transformed\jetified-annotation-experimental-1.4.0\res
+com.example.ganto_shop.app-jetified-tracing-1.2.0-40 C:\Users\Chihab\.gradle\caches\transforms-3\fcb14de0af903890e05c88793554ccd0\transformed\jetified-tracing-1.2.0\res
+com.example.ganto_shop.app-packaged_res-41 C:\Users\Chihab\AppData\Local\Pub\Cache\hosted\pub.dev\flutter_keyboard_visibility-6.0.0\android\android\flutter_keyboard_visibility\intermediates\packaged_res\release
+com.example.ganto_shop.app-packaged_res-42 C:\Users\Chihab\AppData\Local\Pub\Cache\hosted\pub.dev\flutter_native_splash-2.4.4\android\android\flutter_native_splash\intermediates\packaged_res\release
+com.example.ganto_shop.app-packaged_res-43 C:\Users\Chihab\AppData\Local\Pub\Cache\hosted\pub.dev\flutter_plugin_android_lifecycle-2.0.27\android\android\flutter_plugin_android_lifecycle\intermediates\packaged_res\release
+com.example.ganto_shop.app-packaged_res-44 C:\Users\Chihab\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+22\android\android\image_picker_android\intermediates\packaged_res\release
+com.example.ganto_shop.app-packaged_res-45 C:\Users\Chihab\AppData\Local\Pub\Cache\hosted\pub.dev\path_provider_android-2.2.16\android\android\path_provider_android\intermediates\packaged_res\release
+com.example.ganto_shop.app-packaged_res-46 C:\Users\Chihab\AppData\Local\Pub\Cache\hosted\pub.dev\pusher_client-2.0.0\android\android\pusher_client\intermediates\packaged_res\release
+com.example.ganto_shop.app-packaged_res-47 C:\Users\Chihab\AppData\Local\Pub\Cache\hosted\pub.dev\qr_code_scanner_plus-2.0.10+1\android\android\qr_code_scanner_plus\intermediates\packaged_res\release
+com.example.ganto_shop.app-packaged_res-48 C:\Users\Chihab\AppData\Local\Pub\Cache\hosted\pub.dev\scan-1.6.0\android\android\scan\intermediates\packaged_res\release
+com.example.ganto_shop.app-packaged_res-49 C:\Users\Chihab\AppData\Local\Pub\Cache\hosted\pub.dev\share_plus-10.1.4\android\android\share_plus\intermediates\packaged_res\release
+com.example.ganto_shop.app-packaged_res-50 C:\Users\Chihab\AppData\Local\Pub\Cache\hosted\pub.dev\shared_preferences_android-2.4.8\android\android\shared_preferences_android\intermediates\packaged_res\release
+com.example.ganto_shop.app-packaged_res-51 C:\Users\Chihab\AppData\Local\Pub\Cache\hosted\pub.dev\video_player_android-2.8.2\android\android\video_player_android\intermediates\packaged_res\release
+com.example.ganto_shop.app-staging-52 C:\Users\Chihab\Desktop\Ganto Project\ganto_shop\android\app\android\app\generated\res\pngs\staging\release
+com.example.ganto_shop.app-staging-53 C:\Users\Chihab\Desktop\Ganto Project\ganto_shop\android\app\android\app\generated\res\resValues\staging\release
+com.example.ganto_shop.app-packageStagingReleaseResources-54 C:\Users\Chihab\Desktop\Ganto Project\ganto_shop\android\app\android\app\intermediates\incremental\stagingRelease\packageStagingReleaseResources\merged.dir
+com.example.ganto_shop.app-packageStagingReleaseResources-55 C:\Users\Chihab\Desktop\Ganto Project\ganto_shop\android\app\android\app\intermediates\incremental\stagingRelease\packageStagingReleaseResources\stripped.dir
+com.example.ganto_shop.app-merged_res-56 C:\Users\Chihab\Desktop\Ganto Project\ganto_shop\android\app\android\app\intermediates\merged_res\stagingRelease
+com.example.ganto_shop.app-main-57 C:\Users\Chihab\Desktop\Ganto Project\ganto_shop\android\app\src\main\res
+com.example.ganto_shop.app-release-58 C:\Users\Chihab\Desktop\Ganto Project\ganto_shop\android\app\src\release\res
+com.example.ganto_shop.app-staging-59 C:\Users\Chihab\Desktop\Ganto Project\ganto_shop\android\app\src\staging\res
+com.example.ganto_shop.app-stagingRelease-60 C:\Users\Chihab\Desktop\Ganto Project\ganto_shop\android\app\src\stagingRelease\res

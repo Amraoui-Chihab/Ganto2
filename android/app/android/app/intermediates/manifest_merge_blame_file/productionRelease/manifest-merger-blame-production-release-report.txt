@@ -1,0 +1,413 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.ganto_shop"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="35" />
+10
+11    <uses-feature
+11-->C:\Users\Chihab\Desktop\Ganto Project\ganto_shop\android\app\src\main\AndroidManifest.xml:4:5-6:36
+12        android:name="android.hardware.camera"
+12-->C:\Users\Chihab\Desktop\Ganto Project\ganto_shop\android\app\src\main\AndroidManifest.xml:5:9-47
+13        android:required="false" />
+13-->C:\Users\Chihab\Desktop\Ganto Project\ganto_shop\android\app\src\main\AndroidManifest.xml:6:9-33
+14
+15    <uses-permission android:name="android.permission.INTERNET" />
+15-->C:\Users\Chihab\Desktop\Ganto Project\ganto_shop\android\app\src\main\AndroidManifest.xml:8:5-66
+15-->C:\Users\Chihab\Desktop\Ganto Project\ganto_shop\android\app\src\main\AndroidManifest.xml:8:22-64
+16    <uses-permission android:name="android.permission.CAMERA" />
+16-->C:\Users\Chihab\Desktop\Ganto Project\ganto_shop\android\app\src\main\AndroidManifest.xml:9:5-65
+16-->C:\Users\Chihab\Desktop\Ganto Project\ganto_shop\android\app\src\main\AndroidManifest.xml:9:22-62
+17    <!--
+18         Required to query activities that can process text, see:
+19         https://developer.android.com/training/package-visibility and
+20         https://developer.android.com/reference/android/content/Intent#ACTION_PROCESS_TEXT.
+21
+22         In particular, this is used by the Flutter engine in io.flutter.plugin.text.ProcessTextPlugin.
+23    -->
+24    <queries>
+24-->C:\Users\Chihab\Desktop\Ganto Project\ganto_shop\android\app\src\main\AndroidManifest.xml:50:5-55:15
+25        <intent>
+25-->C:\Users\Chihab\Desktop\Ganto Project\ganto_shop\android\app\src\main\AndroidManifest.xml:51:9-54:18
+26            <action android:name="android.intent.action.PROCESS_TEXT" />
+26-->C:\Users\Chihab\Desktop\Ganto Project\ganto_shop\android\app\src\main\AndroidManifest.xml:52:13-72
+26-->C:\Users\Chihab\Desktop\Ganto Project\ganto_shop\android\app\src\main\AndroidManifest.xml:52:21-70
+27
+28            <data android:mimeType="text/plain" />
+28-->C:\Users\Chihab\Desktop\Ganto Project\ganto_shop\android\app\src\main\AndroidManifest.xml:53:13-50
+28-->C:\Users\Chihab\Desktop\Ganto Project\ganto_shop\android\app\src\main\AndroidManifest.xml:53:19-48
+29        </intent>
+30    </queries>
+31
+32    <uses-permission android:name="android.permission.VIBRATE" />
+32-->[:scan] C:\Users\Chihab\AppData\Local\Pub\Cache\hosted\pub.dev\scan-1.6.0\android\android\scan\intermediates\merged_manifest\release\AndroidManifest.xml:11:5-66
+32-->[:scan] C:\Users\Chihab\AppData\Local\Pub\Cache\hosted\pub.dev\scan-1.6.0\android\android\scan\intermediates\merged_manifest\release\AndroidManifest.xml:11:22-63
+33    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+33-->[androidx.media3:media3-common:1.4.1] C:\Users\Chihab\.gradle\caches\transforms-3\2f83ee0294494be85774b474a81b8bd8\transformed\jetified-media3-common-1.4.1\AndroidManifest.xml:22:5-79
+33-->[androidx.media3:media3-common:1.4.1] C:\Users\Chihab\.gradle\caches\transforms-3\2f83ee0294494be85774b474a81b8bd8\transformed\jetified-media3-common-1.4.1\AndroidManifest.xml:22:22-76
+34
+35    <permission
+35-->[androidx.core:core:1.13.1] C:\Users\Chihab\.gradle\caches\transforms-3\a56752d9ebd382fd9ff434f699e13436\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47
+36        android:name="com.example.ganto_shop.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+36-->[androidx.core:core:1.13.1] C:\Users\Chihab\.gradle\caches\transforms-3\a56752d9ebd382fd9ff434f699e13436\transformed\core-1.13.1\AndroidManifest.xml:23:9-81
+37        android:protectionLevel="signature" />
+37-->[androidx.core:core:1.13.1] C:\Users\Chihab\.gradle\caches\transforms-3\a56752d9ebd382fd9ff434f699e13436\transformed\core-1.13.1\AndroidManifest.xml:24:9-44
+38
+39    <uses-permission android:name="com.example.ganto_shop.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+39-->[androidx.core:core:1.13.1] C:\Users\Chihab\.gradle\caches\transforms-3\a56752d9ebd382fd9ff434f699e13436\transformed\core-1.13.1\AndroidManifest.xml:26:5-97
+39-->[androidx.core:core:1.13.1] C:\Users\Chihab\.gradle\caches\transforms-3\a56752d9ebd382fd9ff434f699e13436\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
+40
+41    <uses-feature
+41-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Chihab\.gradle\caches\transforms-3\4c6f9add71608a5b0b8f79d7d6bd2843\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:28:5-30:36
+42        android:name="android.hardware.camera.front"
+42-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Chihab\.gradle\caches\transforms-3\4c6f9add71608a5b0b8f79d7d6bd2843\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:29:9-53
+43        android:required="false" /> <!-- TODO replace above two with next line after Android 4.2 -->
+43-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Chihab\.gradle\caches\transforms-3\4c6f9add71608a5b0b8f79d7d6bd2843\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:30:9-33
+44    <!-- <uses-feature android:name="android.hardware.camera.any"/> -->
+45    <uses-feature
+45-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Chihab\.gradle\caches\transforms-3\4c6f9add71608a5b0b8f79d7d6bd2843\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:33:5-35:36
+46        android:name="android.hardware.camera.autofocus"
+46-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Chihab\.gradle\caches\transforms-3\4c6f9add71608a5b0b8f79d7d6bd2843\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:34:9-57
+47        android:required="false" />
+47-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Chihab\.gradle\caches\transforms-3\4c6f9add71608a5b0b8f79d7d6bd2843\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:35:9-33
+48    <uses-feature
+48-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Chihab\.gradle\caches\transforms-3\4c6f9add71608a5b0b8f79d7d6bd2843\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:36:5-38:36
+49        android:name="android.hardware.camera.flash"
+49-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Chihab\.gradle\caches\transforms-3\4c6f9add71608a5b0b8f79d7d6bd2843\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:37:9-53
+50        android:required="false" />
+50-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Chihab\.gradle\caches\transforms-3\4c6f9add71608a5b0b8f79d7d6bd2843\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:38:9-33
+51    <uses-feature
+51-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Chihab\.gradle\caches\transforms-3\4c6f9add71608a5b0b8f79d7d6bd2843\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:39:5-41:36
+52        android:name="android.hardware.screen.landscape"
+52-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Chihab\.gradle\caches\transforms-3\4c6f9add71608a5b0b8f79d7d6bd2843\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:40:9-57
+53        android:required="false" />
+53-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Chihab\.gradle\caches\transforms-3\4c6f9add71608a5b0b8f79d7d6bd2843\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:41:9-33
+54    <uses-feature
+54-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Chihab\.gradle\caches\transforms-3\4c6f9add71608a5b0b8f79d7d6bd2843\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:42:5-44:36
+55        android:name="android.hardware.wifi"
+55-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Chihab\.gradle\caches\transforms-3\4c6f9add71608a5b0b8f79d7d6bd2843\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:43:9-45
+56        android:required="false" />
+56-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Chihab\.gradle\caches\transforms-3\4c6f9add71608a5b0b8f79d7d6bd2843\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:44:9-33
+57
+58    <application
+59        android:name="android.app.Application"
+59-->C:\Users\Chihab\Desktop\Ganto Project\ganto_shop\android\app\src\main\AndroidManifest.xml:13:9-42
+60        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+60-->[androidx.core:core:1.13.1] C:\Users\Chihab\.gradle\caches\transforms-3\a56752d9ebd382fd9ff434f699e13436\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
+61        android:enableOnBackInvokedCallback="true"
+61-->C:\Users\Chihab\Desktop\Ganto Project\ganto_shop\android\app\src\main\AndroidManifest.xml:15:9-51
+62        android:extractNativeLibs="true"
+63        android:icon="@mipmap/launcher_icon"
+63-->C:\Users\Chihab\Desktop\Ganto Project\ganto_shop\android\app\src\main\AndroidManifest.xml:14:9-45
+64        android:label="Ganto" >
+64-->C:\Users\Chihab\Desktop\Ganto Project\ganto_shop\android\app\src\main\AndroidManifest.xml:12:9-30
+65        <activity
+65-->C:\Users\Chihab\Desktop\Ganto Project\ganto_shop\android\app\src\main\AndroidManifest.xml:17:9-38:20
+66            android:name="com.example.ganto_shop.MainActivity"
+66-->C:\Users\Chihab\Desktop\Ganto Project\ganto_shop\android\app\src\main\AndroidManifest.xml:18:13-41
+67            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+67-->C:\Users\Chihab\Desktop\Ganto Project\ganto_shop\android\app\src\main\AndroidManifest.xml:23:13-163
+68            android:exported="true"
+68-->C:\Users\Chihab\Desktop\Ganto Project\ganto_shop\android\app\src\main\AndroidManifest.xml:19:13-36
+69            android:hardwareAccelerated="true"
+69-->C:\Users\Chihab\Desktop\Ganto Project\ganto_shop\android\app\src\main\AndroidManifest.xml:24:13-47
+70            android:launchMode="singleTop"
+70-->C:\Users\Chihab\Desktop\Ganto Project\ganto_shop\android\app\src\main\AndroidManifest.xml:20:13-43
+71            android:taskAffinity=""
+71-->C:\Users\Chihab\Desktop\Ganto Project\ganto_shop\android\app\src\main\AndroidManifest.xml:21:13-36
+72            android:theme="@style/LaunchTheme"
+72-->C:\Users\Chihab\Desktop\Ganto Project\ganto_shop\android\app\src\main\AndroidManifest.xml:22:13-47
+73            android:windowSoftInputMode="adjustResize" >
+73-->C:\Users\Chihab\Desktop\Ganto Project\ganto_shop\android\app\src\main\AndroidManifest.xml:25:13-55
+74
+75            <!--
+76                 Specifies an Android theme to apply to this Activity as soon as
+77                 the Android process has started. This theme is visible to the user
+78                 while the Flutter UI initializes. After that, this theme continues
+79                 to determine the Window background behind the Flutter UI.
+80            -->
+81            <meta-data
+81-->C:\Users\Chihab\Desktop\Ganto Project\ganto_shop\android\app\src\main\AndroidManifest.xml:30:13-33:17
+82                android:name="io.flutter.embedding.android.NormalTheme"
+82-->C:\Users\Chihab\Desktop\Ganto Project\ganto_shop\android\app\src\main\AndroidManifest.xml:31:15-70
+83                android:resource="@style/NormalTheme" />
+83-->C:\Users\Chihab\Desktop\Ganto Project\ganto_shop\android\app\src\main\AndroidManifest.xml:32:15-52
+84
+85            <intent-filter>
+85-->C:\Users\Chihab\Desktop\Ganto Project\ganto_shop\android\app\src\main\AndroidManifest.xml:34:13-37:29
+86                <action android:name="android.intent.action.MAIN" />
+86-->C:\Users\Chihab\Desktop\Ganto Project\ganto_shop\android\app\src\main\AndroidManifest.xml:35:17-68
+86-->C:\Users\Chihab\Desktop\Ganto Project\ganto_shop\android\app\src\main\AndroidManifest.xml:35:25-66
+87
+88                <category android:name="android.intent.category.LAUNCHER" />
+88-->C:\Users\Chihab\Desktop\Ganto Project\ganto_shop\android\app\src\main\AndroidManifest.xml:36:17-76
+88-->C:\Users\Chihab\Desktop\Ganto Project\ganto_shop\android\app\src\main\AndroidManifest.xml:36:27-74
+89            </intent-filter>
+90        </activity>
+91        <!--
+92             Don't delete the meta-data below.
+93             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+94        -->
+95        <meta-data
+95-->C:\Users\Chihab\Desktop\Ganto Project\ganto_shop\android\app\src\main\AndroidManifest.xml:41:9-43:33
+96            android:name="flutterEmbedding"
+96-->C:\Users\Chihab\Desktop\Ganto Project\ganto_shop\android\app\src\main\AndroidManifest.xml:42:13-44
+97            android:value="2" />
+97-->C:\Users\Chihab\Desktop\Ganto Project\ganto_shop\android\app\src\main\AndroidManifest.xml:43:13-30
+98
+99        <provider
+99-->[:image_picker_android] C:\Users\Chihab\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+22\android\android\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:9:9-17:20
+100            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+100-->[:image_picker_android] C:\Users\Chihab\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+22\android\android\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:10:13-82
+101            android:authorities="com.example.ganto_shop.flutter.image_provider"
+101-->[:image_picker_android] C:\Users\Chihab\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+22\android\android\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:11:13-74
+102            android:exported="false"
+102-->[:image_picker_android] C:\Users\Chihab\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+22\android\android\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:12:13-37
+103            android:grantUriPermissions="true" >
+103-->[:image_picker_android] C:\Users\Chihab\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+22\android\android\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:13:13-47
+104            <meta-data
+104-->[:image_picker_android] C:\Users\Chihab\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+22\android\android\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:14:13-16:75
+105                android:name="android.support.FILE_PROVIDER_PATHS"
+105-->[:image_picker_android] C:\Users\Chihab\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+22\android\android\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:15:17-67
+106                android:resource="@xml/flutter_image_picker_file_paths" />
+106-->[:image_picker_android] C:\Users\Chihab\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+22\android\android\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:16:17-72
+107        </provider> <!-- Trigger Google Play services to install the backported photo picker module. -->
+108        <service
+108-->[:image_picker_android] C:\Users\Chihab\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+22\android\android\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:19:9-31:19
+109            android:name="com.google.android.gms.metadata.ModuleDependencies"
+109-->[:image_picker_android] C:\Users\Chihab\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+22\android\android\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:20:13-78
+110            android:enabled="false"
+110-->[:image_picker_android] C:\Users\Chihab\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+22\android\android\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:21:13-36
+111            android:exported="false" >
+111-->[:image_picker_android] C:\Users\Chihab\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+22\android\android\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:22:13-37
+112            <intent-filter>
+112-->[:image_picker_android] C:\Users\Chihab\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+22\android\android\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:24:13-26:29
+113                <action android:name="com.google.android.gms.metadata.MODULE_DEPENDENCIES" />
+113-->[:image_picker_android] C:\Users\Chihab\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+22\android\android\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:25:17-94
+113-->[:image_picker_android] C:\Users\Chihab\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+22\android\android\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:25:25-91
+114            </intent-filter>
+115
+116            <meta-data
+116-->[:image_picker_android] C:\Users\Chihab\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+22\android\android\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:28:13-30:36
+117                android:name="photopicker_activity:0:required"
+117-->[:image_picker_android] C:\Users\Chihab\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+22\android\android\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:29:17-63
+118                android:value="" />
+118-->[:image_picker_android] C:\Users\Chihab\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+22\android\android\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:30:17-33
+119        </service>
+120        <!--
+121           Declares a provider which allows us to store files to share in
+122           '.../caches/share_plus' and grant the receiving action access
+123        -->
+124        <provider
+124-->[:share_plus] C:\Users\Chihab\AppData\Local\Pub\Cache\hosted\pub.dev\share_plus-10.1.4\android\android\share_plus\intermediates\merged_manifest\release\AndroidManifest.xml:13:9-21:20
+125            android:name="dev.fluttercommunity.plus.share.ShareFileProvider"
+125-->[:share_plus] C:\Users\Chihab\AppData\Local\Pub\Cache\hosted\pub.dev\share_plus-10.1.4\android\android\share_plus\intermediates\merged_manifest\release\AndroidManifest.xml:14:13-77
+126            android:authorities="com.example.ganto_shop.flutter.share_provider"
+126-->[:share_plus] C:\Users\Chihab\AppData\Local\Pub\Cache\hosted\pub.dev\share_plus-10.1.4\android\android\share_plus\intermediates\merged_manifest\release\AndroidManifest.xml:15:13-74
+127            android:exported="false"
+127-->[:share_plus] C:\Users\Chihab\AppData\Local\Pub\Cache\hosted\pub.dev\share_plus-10.1.4\android\android\share_plus\intermediates\merged_manifest\release\AndroidManifest.xml:16:13-37
+128            android:grantUriPermissions="true" >
+128-->[:share_plus] C:\Users\Chihab\AppData\Local\Pub\Cache\hosted\pub.dev\share_plus-10.1.4\android\android\share_plus\intermediates\merged_manifest\release\AndroidManifest.xml:17:13-47
+129            <meta-data
+129-->[:image_picker_android] C:\Users\Chihab\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+22\android\android\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:14:13-16:75
+130                android:name="android.support.FILE_PROVIDER_PATHS"
+130-->[:image_picker_android] C:\Users\Chihab\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+22\android\android\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:15:17-67
+131                android:resource="@xml/flutter_share_file_paths" />
+131-->[:image_picker_android] C:\Users\Chihab\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.12+22\android\android\image_picker_android\intermediates\merged_manifest\release\AndroidManifest.xml:16:17-72
+132        </provider>
+133        <!--
+134           This manifest declared broadcast receiver allows us to use an explicit
+135           Intent when creating a PendingItent to be informed of the user's choice
+136        -->
+137        <receiver
+137-->[:share_plus] C:\Users\Chihab\AppData\Local\Pub\Cache\hosted\pub.dev\share_plus-10.1.4\android\android\share_plus\intermediates\merged_manifest\release\AndroidManifest.xml:26:9-32:20
+138            android:name="dev.fluttercommunity.plus.share.SharePlusPendingIntent"
+138-->[:share_plus] C:\Users\Chihab\AppData\Local\Pub\Cache\hosted\pub.dev\share_plus-10.1.4\android\android\share_plus\intermediates\merged_manifest\release\AndroidManifest.xml:27:13-82
+139            android:exported="false" >
+139-->[:share_plus] C:\Users\Chihab\AppData\Local\Pub\Cache\hosted\pub.dev\share_plus-10.1.4\android\android\share_plus\intermediates\merged_manifest\release\AndroidManifest.xml:28:13-37
+140            <intent-filter>
+140-->[:share_plus] C:\Users\Chihab\AppData\Local\Pub\Cache\hosted\pub.dev\share_plus-10.1.4\android\android\share_plus\intermediates\merged_manifest\release\AndroidManifest.xml:29:13-31:29
+141                <action android:name="EXTRA_CHOSEN_COMPONENT" />
+141-->[:share_plus] C:\Users\Chihab\AppData\Local\Pub\Cache\hosted\pub.dev\share_plus-10.1.4\android\android\share_plus\intermediates\merged_manifest\release\AndroidManifest.xml:30:17-65
+141-->[:share_plus] C:\Users\Chihab\AppData\Local\Pub\Cache\hosted\pub.dev\share_plus-10.1.4\android\android\share_plus\intermediates\merged_manifest\release\AndroidManifest.xml:30:25-62
+142            </intent-filter>
+143        </receiver>
+144
+145        <provider
+145-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Chihab\.gradle\caches\transforms-3\31953f4fdf3512387c64e90e9982e758\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+146            android:name="androidx.startup.InitializationProvider"
+146-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Chihab\.gradle\caches\transforms-3\31953f4fdf3512387c64e90e9982e758\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+147            android:authorities="com.example.ganto_shop.androidx-startup"
+147-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Chihab\.gradle\caches\transforms-3\31953f4fdf3512387c64e90e9982e758\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+148            android:exported="false" >
+148-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Chihab\.gradle\caches\transforms-3\31953f4fdf3512387c64e90e9982e758\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+149            <meta-data
+149-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Chihab\.gradle\caches\transforms-3\31953f4fdf3512387c64e90e9982e758\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+150                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+150-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Chihab\.gradle\caches\transforms-3\31953f4fdf3512387c64e90e9982e758\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+151                android:value="androidx.startup" />
+151-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Chihab\.gradle\caches\transforms-3\31953f4fdf3512387c64e90e9982e758\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+152            <meta-data
+152-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Chihab\.gradle\caches\transforms-3\d00d7b43ef5b13886ad149e7de25b0cf\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:29:13-31:52
+153                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+153-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Chihab\.gradle\caches\transforms-3\d00d7b43ef5b13886ad149e7de25b0cf\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:30:17-78
+154                android:value="androidx.startup" />
+154-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Chihab\.gradle\caches\transforms-3\d00d7b43ef5b13886ad149e7de25b0cf\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:31:17-49
+155            <meta-data
+155-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Chihab\.gradle\caches\transforms-3\a0d2a77580c98966a798f6526f364588\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+156                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+156-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Chihab\.gradle\caches\transforms-3\a0d2a77580c98966a798f6526f364588\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+157                android:value="androidx.startup" />
+157-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Chihab\.gradle\caches\transforms-3\a0d2a77580c98966a798f6526f364588\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+158        </provider>
+159
+160        <uses-library
+160-->[androidx.window:window:1.2.0] C:\Users\Chihab\.gradle\caches\transforms-3\a0ed2474e9617e02c3727ddf656b38d6\transformed\jetified-window-1.2.0\AndroidManifest.xml:23:9-25:40
+161            android:name="androidx.window.extensions"
+161-->[androidx.window:window:1.2.0] C:\Users\Chihab\.gradle\caches\transforms-3\a0ed2474e9617e02c3727ddf656b38d6\transformed\jetified-window-1.2.0\AndroidManifest.xml:24:13-54
+162            android:required="false" />
+162-->[androidx.window:window:1.2.0] C:\Users\Chihab\.gradle\caches\transforms-3\a0ed2474e9617e02c3727ddf656b38d6\transformed\jetified-window-1.2.0\AndroidManifest.xml:25:13-37
+163        <uses-library
+163-->[androidx.window:window:1.2.0] C:\Users\Chihab\.gradle\caches\transforms-3\a0ed2474e9617e02c3727ddf656b38d6\transformed\jetified-window-1.2.0\AndroidManifest.xml:26:9-28:40
+164            android:name="androidx.window.sidecar"
+164-->[androidx.window:window:1.2.0] C:\Users\Chihab\.gradle\caches\transforms-3\a0ed2474e9617e02c3727ddf656b38d6\transformed\jetified-window-1.2.0\AndroidManifest.xml:27:13-51
+165            android:required="false" />
+165-->[androidx.window:window:1.2.0] C:\Users\Chihab\.gradle\caches\transforms-3\a0ed2474e9617e02c3727ddf656b38d6\transformed\jetified-window-1.2.0\AndroidManifest.xml:28:13-37
+166
+167        <receiver
+167-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Chihab\.gradle\caches\transforms-3\a0d2a77580c98966a798f6526f364588\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+168            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+168-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Chihab\.gradle\caches\transforms-3\a0d2a77580c98966a798f6526f364588\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+169            android:directBootAware="false"
+169-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Chihab\.gradle\caches\transforms-3\a0d2a77580c98966a798f6526f364588\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+170            android:enabled="true"
+170-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Chihab\.gradle\caches\transforms-3\a0d2a77580c98966a798f6526f364588\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+171            android:exported="true"
+171-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Chihab\.gradle\caches\transforms-3\a0d2a77580c98966a798f6526f364588\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+172            android:permission="android.permission.DUMP" >
+172-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Chihab\.gradle\caches\transforms-3\a0d2a77580c98966a798f6526f364588\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+173            <intent-filter>
+173-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Chihab\.gradle\caches\transforms-3\a0d2a77580c98966a798f6526f364588\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+174                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+174-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Chihab\.gradle\caches\transforms-3\a0d2a77580c98966a798f6526f364588\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+174-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Chihab\.gradle\caches\transforms-3\a0d2a77580c98966a798f6526f364588\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+175            </intent-filter>
+176            <intent-filter>
+176-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Chihab\.gradle\caches\transforms-3\a0d2a77580c98966a798f6526f364588\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+177                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+177-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Chihab\.gradle\caches\transforms-3\a0d2a77580c98966a798f6526f364588\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+177-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Chihab\.gradle\caches\transforms-3\a0d2a77580c98966a798f6526f364588\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+178            </intent-filter>
+179            <intent-filter>
+179-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Chihab\.gradle\caches\transforms-3\a0d2a77580c98966a798f6526f364588\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+180                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+180-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Chihab\.gradle\caches\transforms-3\a0d2a77580c98966a798f6526f364588\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+180-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Chihab\.gradle\caches\transforms-3\a0d2a77580c98966a798f6526f364588\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+181            </intent-filter>
+182            <intent-filter>
+182-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Chihab\.gradle\caches\transforms-3\a0d2a77580c98966a798f6526f364588\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+183                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+183-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Chihab\.gradle\caches\transforms-3\a0d2a77580c98966a798f6526f364588\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+183-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Chihab\.gradle\caches\transforms-3\a0d2a77580c98966a798f6526f364588\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
+184            </intent-filter>
+185        </receiver>
+186
+187        <meta-data
+187-->[com.huawei.hms:scanplus:2.1.0.300] C:\Users\Chihab\.gradle\caches\transforms-3\bbd4e48a6bc3b708a8e407614801ef10\transformed\jetified-scanplus-2.1.0.300\AndroidManifest.xml:14:9-16:40
+188            android:name="huawei_module_scankit_local"
+188-->[com.huawei.hms:scanplus:2.1.0.300] C:\Users\Chihab\.gradle\caches\transforms-3\bbd4e48a6bc3b708a8e407614801ef10\transformed\jetified-scanplus-2.1.0.300\AndroidManifest.xml:15:13-55
+189            android:value="20100300" />
+189-->[com.huawei.hms:scanplus:2.1.0.300] C:\Users\Chihab\.gradle\caches\transforms-3\bbd4e48a6bc3b708a8e407614801ef10\transformed\jetified-scanplus-2.1.0.300\AndroidManifest.xml:16:13-37
+190        <meta-data
+190-->[com.huawei.hms:scanplus:2.1.0.300] C:\Users\Chihab\.gradle\caches\transforms-3\bbd4e48a6bc3b708a8e407614801ef10\transformed\jetified-scanplus-2.1.0.300\AndroidManifest.xml:17:9-19:50
+191            android:name="huawei_module_scankit_sdk_version"
+191-->[com.huawei.hms:scanplus:2.1.0.300] C:\Users\Chihab\.gradle\caches\transforms-3\bbd4e48a6bc3b708a8e407614801ef10\transformed\jetified-scanplus-2.1.0.300\AndroidManifest.xml:18:13-61
+192            android:value="scanplus:2.1.0.300" />
+192-->[com.huawei.hms:scanplus:2.1.0.300] C:\Users\Chihab\.gradle\caches\transforms-3\bbd4e48a6bc3b708a8e407614801ef10\transformed\jetified-scanplus-2.1.0.300\AndroidManifest.xml:19:13-47
+193        <meta-data
+193-->[com.huawei.hms:scanplus:2.1.0.300] C:\Users\Chihab\.gradle\caches\transforms-3\bbd4e48a6bc3b708a8e407614801ef10\transformed\jetified-scanplus-2.1.0.300\AndroidManifest.xml:20:9-22:50
+194            android:name="com.huawei.hms.client.service.name:scanplus"
+194-->[com.huawei.hms:scanplus:2.1.0.300] C:\Users\Chihab\.gradle\caches\transforms-3\bbd4e48a6bc3b708a8e407614801ef10\transformed\jetified-scanplus-2.1.0.300\AndroidManifest.xml:21:13-71
+195            android:value="scanplus:2.1.0.300" />
+195-->[com.huawei.hms:scanplus:2.1.0.300] C:\Users\Chihab\.gradle\caches\transforms-3\bbd4e48a6bc3b708a8e407614801ef10\transformed\jetified-scanplus-2.1.0.300\AndroidManifest.xml:22:13-47
+196        <meta-data
+196-->[com.huawei.hms:scanplus:2.1.0.300] C:\Users\Chihab\.gradle\caches\transforms-3\bbd4e48a6bc3b708a8e407614801ef10\transformed\jetified-scanplus-2.1.0.300\AndroidManifest.xml:23:9-25:33
+197            android:name="com.huawei.hms.min_api_level:scanplus:huawei_module_scankit"
+197-->[com.huawei.hms:scanplus:2.1.0.300] C:\Users\Chihab\.gradle\caches\transforms-3\bbd4e48a6bc3b708a8e407614801ef10\transformed\jetified-scanplus-2.1.0.300\AndroidManifest.xml:24:13-87
+198            android:value="1" />
+198-->[com.huawei.hms:scanplus:2.1.0.300] C:\Users\Chihab\.gradle\caches\transforms-3\bbd4e48a6bc3b708a8e407614801ef10\transformed\jetified-scanplus-2.1.0.300\AndroidManifest.xml:25:13-30
+199        <meta-data
+199-->[com.huawei.hms:scanplus:2.1.0.300] C:\Users\Chihab\.gradle\caches\transforms-3\bbd4e48a6bc3b708a8e407614801ef10\transformed\jetified-scanplus-2.1.0.300\AndroidManifest.xml:26:9-28:33
+200            android:name="com.huawei.hms.min_api_level:scanplus:hmscore"
+200-->[com.huawei.hms:scanplus:2.1.0.300] C:\Users\Chihab\.gradle\caches\transforms-3\bbd4e48a6bc3b708a8e407614801ef10\transformed\jetified-scanplus-2.1.0.300\AndroidManifest.xml:27:13-73
+201            android:value="1" />
+201-->[com.huawei.hms:scanplus:2.1.0.300] C:\Users\Chihab\.gradle\caches\transforms-3\bbd4e48a6bc3b708a8e407614801ef10\transformed\jetified-scanplus-2.1.0.300\AndroidManifest.xml:28:13-30
+202
+203        <activity android:name="com.huawei.hms.hmsscankit.ScanKitActivity" />
+203-->[com.huawei.hms:scanplus:2.1.0.300] C:\Users\Chihab\.gradle\caches\transforms-3\bbd4e48a6bc3b708a8e407614801ef10\transformed\jetified-scanplus-2.1.0.300\AndroidManifest.xml:30:9-78
+203-->[com.huawei.hms:scanplus:2.1.0.300] C:\Users\Chihab\.gradle\caches\transforms-3\bbd4e48a6bc3b708a8e407614801ef10\transformed\jetified-scanplus-2.1.0.300\AndroidManifest.xml:30:19-75
+204
+205        <uses-library
+205-->[com.huawei.android.hms:security-ssl:1.1.5.301] C:\Users\Chihab\.gradle\caches\transforms-3\405af0d754a7603dfa84071756037a2c\transformed\jetified-security-ssl-1.1.5.301\AndroidManifest.xml:10:9-12:40
+206            android:name="org.apache.http.legacy"
+206-->[com.huawei.android.hms:security-ssl:1.1.5.301] C:\Users\Chihab\.gradle\caches\transforms-3\405af0d754a7603dfa84071756037a2c\transformed\jetified-security-ssl-1.1.5.301\AndroidManifest.xml:11:13-50
+207            android:required="false" />
+207-->[com.huawei.android.hms:security-ssl:1.1.5.301] C:\Users\Chihab\.gradle\caches\transforms-3\405af0d754a7603dfa84071756037a2c\transformed\jetified-security-ssl-1.1.5.301\AndroidManifest.xml:12:13-37
+208
+209        <activity
+209-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Chihab\.gradle\caches\transforms-3\4c6f9add71608a5b0b8f79d7d6bd2843\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:47:9-53:63
+210            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+210-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Chihab\.gradle\caches\transforms-3\4c6f9add71608a5b0b8f79d7d6bd2843\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:48:13-74
+211            android:clearTaskOnLaunch="true"
+211-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Chihab\.gradle\caches\transforms-3\4c6f9add71608a5b0b8f79d7d6bd2843\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:49:13-45
+212            android:screenOrientation="sensorLandscape"
+212-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Chihab\.gradle\caches\transforms-3\4c6f9add71608a5b0b8f79d7d6bd2843\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:50:13-56
+213            android:stateNotNeeded="true"
+213-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Chihab\.gradle\caches\transforms-3\4c6f9add71608a5b0b8f79d7d6bd2843\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:51:13-42
+214            android:theme="@style/zxing_CaptureTheme"
+214-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Chihab\.gradle\caches\transforms-3\4c6f9add71608a5b0b8f79d7d6bd2843\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:52:13-54
+215            android:windowSoftInputMode="stateAlwaysHidden" />
+215-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Chihab\.gradle\caches\transforms-3\4c6f9add71608a5b0b8f79d7d6bd2843\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:53:13-60
+216
+217        <meta-data
+217-->[com.huawei.hms:dynamic-api:1.0.13.303] C:\Users\Chihab\.gradle\caches\transforms-3\57aa8c4413f73d985c76067f291b3ba8\transformed\jetified-dynamic-api-1.0.13.303\AndroidManifest.xml:12:9-14:54
+218            android:name="com.huawei.hms.client.service.name:dynamic-api"
+218-->[com.huawei.hms:dynamic-api:1.0.13.303] C:\Users\Chihab\.gradle\caches\transforms-3\57aa8c4413f73d985c76067f291b3ba8\transformed\jetified-dynamic-api-1.0.13.303\AndroidManifest.xml:13:13-74
+219            android:value="dynamic-api:1.0.13.303" />
+219-->[com.huawei.hms:dynamic-api:1.0.13.303] C:\Users\Chihab\.gradle\caches\transforms-3\57aa8c4413f73d985c76067f291b3ba8\transformed\jetified-dynamic-api-1.0.13.303\AndroidManifest.xml:14:13-51
+220        <meta-data
+220-->[com.huawei.hms:dynamic-api:1.0.13.303] C:\Users\Chihab\.gradle\caches\transforms-3\57aa8c4413f73d985c76067f291b3ba8\transformed\jetified-dynamic-api-1.0.13.303\AndroidManifest.xml:15:9-17:33
+221            android:name="com.huawei.hms.min_api_level:dynamic-api:huawei_module_dynamicloader"
+221-->[com.huawei.hms:dynamic-api:1.0.13.303] C:\Users\Chihab\.gradle\caches\transforms-3\57aa8c4413f73d985c76067f291b3ba8\transformed\jetified-dynamic-api-1.0.13.303\AndroidManifest.xml:16:13-96
+222            android:value="2" />
+222-->[com.huawei.hms:dynamic-api:1.0.13.303] C:\Users\Chihab\.gradle\caches\transforms-3\57aa8c4413f73d985c76067f291b3ba8\transformed\jetified-dynamic-api-1.0.13.303\AndroidManifest.xml:17:13-30
+223
+224        <provider
+224-->[com.huawei.hms:ml-computer-sdkbase-inner:2.0.5.304] C:\Users\Chihab\.gradle\caches\transforms-3\4868d277fd51bf016f24fb13168e37c7\transformed\jetified-ml-computer-sdkbase-inner-2.0.5.304\AndroidManifest.xml:13:9-16:40
+225            android:name="com.huawei.hms.mlsdk.common.provider.MLInitializerProvider"
+225-->[com.huawei.hms:ml-computer-sdkbase-inner:2.0.5.304] C:\Users\Chihab\.gradle\caches\transforms-3\4868d277fd51bf016f24fb13168e37c7\transformed\jetified-ml-computer-sdkbase-inner-2.0.5.304\AndroidManifest.xml:14:13-86
+226            android:authorities="com.example.ganto_shop.MLInitializerProvider"
+226-->[com.huawei.hms:ml-computer-sdkbase-inner:2.0.5.304] C:\Users\Chihab\.gradle\caches\transforms-3\4868d277fd51bf016f24fb13168e37c7\transformed\jetified-ml-computer-sdkbase-inner-2.0.5.304\AndroidManifest.xml:15:13-73
+227            android:exported="false" />
+227-->[com.huawei.hms:ml-computer-sdkbase-inner:2.0.5.304] C:\Users\Chihab\.gradle\caches\transforms-3\4868d277fd51bf016f24fb13168e37c7\transformed\jetified-ml-computer-sdkbase-inner-2.0.5.304\AndroidManifest.xml:16:13-37
+228        <provider
+228-->[com.huawei.agconnect:agconnect-core:1.4.0.300] C:\Users\Chihab\.gradle\caches\transforms-3\96c186326bbdda1bb7d0bbbe939f66a3\transformed\jetified-agconnect-core-1.4.0.300\AndroidManifest.xml:11:9-14:40
+229            android:name="com.huawei.agconnect.core.provider.AGConnectInitializeProvider"
+229-->[com.huawei.agconnect:agconnect-core:1.4.0.300] C:\Users\Chihab\.gradle\caches\transforms-3\96c186326bbdda1bb7d0bbbe939f66a3\transformed\jetified-agconnect-core-1.4.0.300\AndroidManifest.xml:12:13-90
+230            android:authorities="com.example.ganto_shop.AGCInitializeProvider"
+230-->[com.huawei.agconnect:agconnect-core:1.4.0.300] C:\Users\Chihab\.gradle\caches\transforms-3\96c186326bbdda1bb7d0bbbe939f66a3\transformed\jetified-agconnect-core-1.4.0.300\AndroidManifest.xml:13:13-73
+231            android:exported="false" />
+231-->[com.huawei.agconnect:agconnect-core:1.4.0.300] C:\Users\Chihab\.gradle\caches\transforms-3\96c186326bbdda1bb7d0bbbe939f66a3\transformed\jetified-agconnect-core-1.4.0.300\AndroidManifest.xml:14:13-37
+232
+233        <service
+233-->[com.huawei.agconnect:agconnect-core:1.4.0.300] C:\Users\Chihab\.gradle\caches\transforms-3\96c186326bbdda1bb7d0bbbe939f66a3\transformed\jetified-agconnect-core-1.4.0.300\AndroidManifest.xml:16:9-18:40
+234            android:name="com.huawei.agconnect.core.ServiceDiscovery"
+234-->[com.huawei.agconnect:agconnect-core:1.4.0.300] C:\Users\Chihab\.gradle\caches\transforms-3\96c186326bbdda1bb7d0bbbe939f66a3\transformed\jetified-agconnect-core-1.4.0.300\AndroidManifest.xml:17:13-70
+235            android:exported="false" />
+235-->[com.huawei.agconnect:agconnect-core:1.4.0.300] C:\Users\Chihab\.gradle\caches\transforms-3\96c186326bbdda1bb7d0bbbe939f66a3\transformed\jetified-agconnect-core-1.4.0.300\AndroidManifest.xml:18:13-37
+236    </application>
+237
+238</manifest>

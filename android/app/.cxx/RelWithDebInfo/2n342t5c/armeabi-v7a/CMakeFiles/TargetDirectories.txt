@@ -1,0 +1,2 @@
+C:/Users/Chihab/Desktop/Ganto Project/ganto_shop/android/app/.cxx/RelWithDebInfo/2n342t5c/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/Users/Chihab/Desktop/Ganto Project/ganto_shop/android/app/.cxx/RelWithDebInfo/2n342t5c/armeabi-v7a/CMakeFiles/rebuild_cache.dir
