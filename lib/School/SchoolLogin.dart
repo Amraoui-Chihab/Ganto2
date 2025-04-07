@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ganto_shop/Controllers/Company_controller.dart';
+import 'package:Ganto/Controllers/Company_controller.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_svg/flutter_svg.dart'; // Import SVG package

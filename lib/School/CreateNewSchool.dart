@@ -8,7 +8,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:intl_phone_field2/intl_phone_field.dart';
 import 'package:intl_phone_field2/country_picker_dialog.dart';
 
-import 'package:ganto_shop/Controllers/Company_controller.dart';
+import 'package:Ganto/Controllers/Company_controller.dart';
 
 class CreateNewSchoolPage extends StatefulWidget {
   @override

@@ -3,8 +3,8 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 
 
-import 'package:ganto_shop/Models/User.dart';
-import 'package:ganto_shop/main.dart';
+import 'package:Ganto/Models/User.dart';
+import 'package:Ganto/main.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';

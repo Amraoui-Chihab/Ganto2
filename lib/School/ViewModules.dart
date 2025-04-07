@@ -2,7 +2,7 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:ganto_shop/Models/Module.dart';
+import 'package:Ganto/Models/Module.dart';
 import 'package:get/get.dart';
 
 import '../Controllers/SchoolController.dart';

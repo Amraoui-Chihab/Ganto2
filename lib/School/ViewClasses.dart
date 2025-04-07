@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ganto_shop/Models/Class.dart';
+import 'package:Ganto/Models/Class.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../Controllers/SchoolController.dart';

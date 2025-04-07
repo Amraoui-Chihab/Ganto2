@@ -1,4 +1,4 @@
-import 'package:ganto_shop/Models/Student.dart';
+import 'package:Ganto/Models/Student.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 

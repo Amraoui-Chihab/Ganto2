@@ -1,12 +1,12 @@
 import 'dart:convert';
 import 'package:flutter/src/widgets/navigator.dart';
-import 'package:ganto_shop/Controllers/Company_controller.dart';
-import 'package:ganto_shop/Controllers/SchoolController.dart';
-import 'package:ganto_shop/Controllers/StudentController.dart';
-import 'package:ganto_shop/Controllers/TeacherController.dart';
-import 'package:ganto_shop/Models/Company.dart';
-import 'package:ganto_shop/Models/School.dart';
-import 'package:ganto_shop/main.dart';
+import 'package:Ganto/Controllers/Company_controller.dart';
+import 'package:Ganto/Controllers/SchoolController.dart';
+import 'package:Ganto/Controllers/StudentController.dart';
+import 'package:Ganto/Controllers/TeacherController.dart';
+import 'package:Ganto/Models/Company.dart';
+import 'package:Ganto/Models/School.dart';
+import 'package:Ganto/main.dart';
 import 'package:get/get.dart';
 
 

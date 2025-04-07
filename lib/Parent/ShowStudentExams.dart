@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ganto_shop/Models/Exam.dart';
+import 'package:Ganto/Models/Exam.dart';
 import 'package:get/get.dart';
 import 'package:flutter/services.dart';
 import '../Controllers/StudentController.dart';

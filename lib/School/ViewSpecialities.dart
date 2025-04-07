@@ -1,7 +1,7 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:ganto_shop/Models/Speciality.dart';
+import 'package:Ganto/Models/Speciality.dart';
 import 'package:get/get.dart';
 
 import '../Controllers/SchoolController.dart';

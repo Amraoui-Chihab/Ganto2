@@ -1,5 +1,4 @@
 
-import 'package:ganto_shop/Models/Student.dart';
 
 class Average
 {

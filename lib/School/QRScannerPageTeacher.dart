@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ganto_shop/Controllers/User_controller.dart';
+import 'package:Ganto/Controllers/User_controller.dart';
 import 'package:qr_code_scanner_plus/qr_code_scanner_plus.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';

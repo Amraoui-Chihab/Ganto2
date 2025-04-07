@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:ganto_shop/Company/Pages/CompanyProfile.dart';
+import 'package:Ganto/Company/Pages/CompanyProfile.dart';
 
 import 'package:get/get.dart';
 

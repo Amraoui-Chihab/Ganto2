@@ -1,11 +1,11 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:ganto_shop/Controllers/User_controller.dart';
-import 'package:ganto_shop/Models/Absence.dart';
-import 'package:ganto_shop/Models/FullCourse.dart';
-import 'package:ganto_shop/Models/Student.dart';
-import 'package:ganto_shop/Models/Teacher.dart';
+import 'package:Ganto/Controllers/User_controller.dart';
+import 'package:Ganto/Models/Absence.dart';
+import 'package:Ganto/Models/FullCourse.dart';
+import 'package:Ganto/Models/Student.dart';
+import 'package:Ganto/Models/Teacher.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 import 'package:google_fonts/google_fonts.dart';

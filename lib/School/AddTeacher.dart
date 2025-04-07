@@ -1,5 +1,5 @@
 import 'dart:io';
-import 'package:ganto_shop/Controllers/SchoolController.dart';
+import 'package:Ganto/Controllers/SchoolController.dart';
 import 'package:keyboard_avoider/keyboard_avoider.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import 'package:flutter/material.dart';

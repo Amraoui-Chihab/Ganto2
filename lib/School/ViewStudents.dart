@@ -2,10 +2,10 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:ganto_shop/Models/Student.dart';
+import 'package:Ganto/Models/Student.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:qr_flutter/qr_flutter.dart';
-import 'package:ganto_shop/Controllers/SchoolController.dart';
+import 'package:Ganto/Controllers/SchoolController.dart';
 import 'package:get/get.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:path_provider/path_provider.dart';

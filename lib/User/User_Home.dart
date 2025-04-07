@@ -1,10 +1,10 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:ganto_shop/Controllers/User_controller.dart';
-import 'package:ganto_shop/User/Pages/Categories_for_user.dart';
+import 'package:Ganto/Controllers/User_controller.dart';
+import 'package:Ganto/User/Pages/Categories_for_user.dart';
 
-import 'package:ganto_shop/User/Pages/User_profile.dart';
+import 'package:Ganto/User/Pages/User_profile.dart';
 import 'package:get/get.dart';
 
 import 'package:google_fonts/google_fonts.dart';
