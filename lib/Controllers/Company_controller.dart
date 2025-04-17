@@ -631,6 +631,10 @@ class CompanyController extends GetxController {
   }
 
   Future<void> logout() async {
+
+    print(prefs.getString("token"));
+
+   // return;
     Get.dialog(
         Center(
           child: Container(
@@ -668,7 +672,7 @@ class CompanyController extends GetxController {
       Get.back();
 
 
-      var data =jsonDecode(response.body);
+      //var data =jsonDecode(response.body);
       if (response.statusCode == 200) {
 
         prefs.remove("token");
@@ -699,7 +703,8 @@ class CompanyController extends GetxController {
           ..showSnackBar(snackBar);
       }
     } catch (e) {
-      Get.back();
+     // Get.back();
+      print("here hhhhhhhhhh00");
       print(e.toString());
 
       var snackBar = SnackBar(

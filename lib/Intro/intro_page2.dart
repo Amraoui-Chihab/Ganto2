@@ -13,6 +13,8 @@ class _IntroductionPage2State extends State<IntroductionPage2> {
   String currentlanguage = "English";
   @override
   Widget build(BuildContext context) {
+    bool isArabic = Get.locale?.languageCode == "ar";
+
     return Scaffold(
       body: Container(
         height: Get.height, // Ensures container matches the screen height
@@ -25,13 +27,43 @@ class _IntroductionPage2State extends State<IntroductionPage2> {
         ),
         child: Stack(
           children: [
+            // Back Arrow Button with position based on language
+            Positioned(
+              top: 40,
+              left: isArabic ? null : 20,
+              right: isArabic ? 20 : null,
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  shape: BoxShape.circle,
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.2),
+                      blurRadius: 5,
+                      spreadRadius: 1,
+                    ),
+                  ],
+                ),
+                child: IconButton(
+                  icon: Icon(
+                     Icons.arrow_back,
+                    color: Colors.blue[800],
+                    size: 24,
+                  ),
+                  onPressed: () {
+                    Get.back();
+
+                  },
+                ),
+              ),
+            ),
+
             // Text Positioned on Background Image
             Container(
               margin: EdgeInsets.only(
                   top: Get.height * 0.5 / 10,
                   left: Get.width / 2.6,
-                  right:
-                      Get.locale?.languageCode == "en" ? 0 : Get.width / 3.7),
+                  right: isArabic ? Get.width / 3.7 : 0),
               child: DropdownButton<String>(
                 value: currentlanguage,
 
@@ -43,13 +75,15 @@ class _IntroductionPage2State extends State<IntroductionPage2> {
                 onChanged: (String? newValue) {
                   if (newValue == "English") {
                     Get.updateLocale(Locale('en'));
+                    isArabic = false;
                   } else {
                     Get.updateLocale(Locale('ar'));
+                    isArabic = true;
                   }
                   setState(() {
                     currentlanguage = newValue!;
                   });
-                  //Navigator.pop(context);
+
                 },
                 items: <String>[
                   'English',
@@ -66,7 +100,7 @@ class _IntroductionPage2State extends State<IntroductionPage2> {
               margin: EdgeInsets.only(
                   top: Get.height * 1.85 / 4,
                   left: 30,
-                  right: Get.locale?.languageCode == "en" ? 0 : 30),
+                  right: isArabic ? 30 : 0),
               child: Text(
                 "YOUR BEST \nSHOPPING APP".tr,
                 style: GoogleFonts.poppins(

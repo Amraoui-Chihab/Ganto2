@@ -20,6 +20,7 @@ class _CompanySignupemailState extends State<CompanySignupemail> {
   String currentLanguage = "English";
 
   bool showpassword = false;
+  bool isArabic = Get.locale?.languageCode == "ar";
 
   TextEditingController CompanyNamecontroller = TextEditingController();
   TextEditingController EmailController = new TextEditingController();
@@ -58,6 +59,35 @@ class _CompanySignupemailState extends State<CompanySignupemail> {
             ),
             child: Stack(
               children: [
+                Positioned(
+                  top: 40,
+                  left: isArabic ? null : 20,
+                  right: isArabic ? 20 : null,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      shape: BoxShape.circle,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.2),
+                          blurRadius: 5,
+                          spreadRadius: 1,
+                        ),
+                      ],
+                    ),
+                    child: IconButton(
+                      icon: Icon(
+                        Icons.arrow_back,
+                        color: Colors.blue[800],
+                        size: 24,
+                      ),
+                      onPressed: () {
+                        Get.back();
+
+                      },
+                    ),
+                  ),
+                ),
                 // Language Dropdown
                 Positioned(
                   top: screenHeight * 0.05,
@@ -77,8 +107,10 @@ class _CompanySignupemailState extends State<CompanySignupemail> {
                       onChanged: (String? newValue) {
                         if (newValue == "English") {
                           Get.updateLocale(const Locale('en'));
+                          isArabic = false;
                         } else {
                           Get.updateLocale(const Locale('ar'));
+                          isArabic = true;
                         }
                         setState(() {
                           currentLanguage = newValue!;

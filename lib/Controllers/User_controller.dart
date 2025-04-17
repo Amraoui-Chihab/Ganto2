@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 
+import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 
 import 'package:Ganto/Models/User.dart';
 import 'package:Ganto/main.dart';
@@ -95,82 +96,7 @@ class UserController extends GetxController {
   void Navigate_Between_Categories(String category) {
     switch (category.toLowerCase()) {
     // Convert to lowercase for case-insensitive comparison
-      case 'restaurant':
-        print("Navigating to Restaurant Page...");
-        // Get.to(RestaurantPage());
-        break;
-      case 'hotels':
-        print("Navigating to Hotels Page...");
-        // Get.to(HotelsPage());
-        break;
-      case 'tourisme':
-        print("Navigating to Tourism Page...");
-        // Get.to(TourismPage());
-        break;
-      case 'hospitals':
-        print("Navigating to Hospitals Page...");
-        // Get.to(HospitalsPage());
-        break;
-      case 'stores':
-        print("Navigating to Stores Page...");
-        // Get.to(StoresPage());
-        break;
-      case 'cosmetics':
-        print("Navigating to Cosmetics Page...");
-        // Get.to(CosmeticsPage());
-        break;
-      case 'clothes':
-        print("Navigating to Clothes Page...");
-        // Get.to(ClothesPage());
-        break;
-      case 'delivery':
-        print("Navigating to Delivery Page...");
-        // Get.to(DeliveryPage());
-        break;
-      case 'handyman':
-        print("Navigating to Handyman Page...");
-        // Get.to(HandymanPage());
-        break;
-      case 'products':
-        print("Navigating to Products Page...");
-        // Get.to(ProductsPage());
-        break;
-      case 'services':
-        print("Navigating to Services Page...");
-        // Get.to(ServicesPage());
-        break;
-      case 'estates':
-        print("Navigating to Estates Page...");
-        // Get.to(EstatesPage());
-        break;
-      case 'factories':
-        print("Navigating to Factories Page...");
-        // Get.to(FactoriesPage());
-        break;
-      case 'bussines':
-        print("Navigating to Business Page...");
-        // Get.to(BusinessPage());
-        break;
-      case 'cars':
-        print("Navigating to Cars Page...");
-        // Get.to(CarsPage());
-        break;
-      case 'games':
-        print("Navigating to Games Page...");
-        // Get.to(GamesPage());
-        break;
-      case 'libraries':
-        print("Navigating to Libraries Page...");
-        // Get.to(LibrariesPage());
-        break;
-      case 'electronics':
-        print("Navigating to Electronics Page...");
-        // Get.to(ElectronicsPage());
-        break;
-      case 'taxi':
-        print("Navigating to Taxi Page...");
-        // Get.to(TaxiPage());
-        break;
+
 
       case 'education':
         naviagte_to_education_category();
@@ -188,9 +114,32 @@ class UserController extends GetxController {
         // Get.to(TaxiPage());
         break;
       default:
-        print("Category not found!");
-    // Handle unknown categories
+        NotYetCategory();
+
     }
+  }
+
+  void NotYetCategory()
+  {
+    var snackBar = SnackBar(
+      elevation: 0,
+      backgroundColor: Colors.transparent,
+      content: AwesomeSnackbarContent(
+        messageTextStyle: GoogleFonts.poppins(),
+        titleTextStyle:
+        GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 20),
+        color: Colors.blue,
+        title: 'Notification',
+        message: "Category Available Soon",
+        contentType: ContentType.help,
+
+
+      ),
+    );
+
+    ScaffoldMessenger.of(Get.context!)
+      ..hideCurrentSnackBar()
+      ..showSnackBar(snackBar);
   }
 
   void NavigateToParentPage() {

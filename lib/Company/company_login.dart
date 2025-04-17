@@ -21,7 +21,7 @@ class _CompanyLoginState extends State<CompanyLogin> {
   String phone_complete = '';
   TextEditingController phone_password_controller = new TextEditingController();
 
-
+  bool isArabic = Get.locale?.languageCode == "ar";
 
   @override
   Widget build(BuildContext context) {
@@ -43,6 +43,35 @@ class _CompanyLoginState extends State<CompanyLogin> {
             child: Stack(
               children: [
                 Positioned(
+                  top: 40,
+                  left: isArabic ? null : 20,
+                  right: isArabic ? 20 : null,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      shape: BoxShape.circle,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.2),
+                          blurRadius: 5,
+                          spreadRadius: 1,
+                        ),
+                      ],
+                    ),
+                    child: IconButton(
+                      icon: Icon(
+                        Icons.arrow_back,
+                        color: Colors.blue[800],
+                        size: 24,
+                      ),
+                      onPressed: () {
+                        Get.back();
+
+                      },
+                    ),
+                  ),
+                ),
+                Positioned(
                   top: screenHeight * 0.05,
                   left: screenWidth / 3,
                   child: DropdownButton<String>(
@@ -55,8 +84,10 @@ class _CompanyLoginState extends State<CompanyLogin> {
                     onChanged: (String? newValue) {
                       if (newValue == "English") {
                         Get.updateLocale(const Locale('en'));
+                        isArabic = false;
                       } else {
                         Get.updateLocale(const Locale('ar'));
+                        isArabic = true;
                       }
                       setState(() {
                         currentLanguage = newValue!;
