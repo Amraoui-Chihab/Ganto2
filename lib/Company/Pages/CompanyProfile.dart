@@ -10,6 +10,8 @@ import 'package:image_picker/image_picker.dart';
 
 import 'package:intl_phone_field2/intl_phone_field.dart';
 
+import '../../main.dart';
+
 
 class Companyprofile extends StatelessWidget {
   CompanyController companyController = Get.find<CompanyController>();
@@ -17,6 +19,8 @@ class Companyprofile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print(prefs.getString("token"));
+    print(prefs.getString("token2"));
 
     String phone_complete = "";
 

@@ -179,6 +179,54 @@ class _DirectorGridState extends State<DirectorGrid> {
 
             // Logout Button
             ListTile(
+              leading: Icon(
+                Icons.delete,
+                color: Colors.red,
+              ),
+              title: Text(
+                'Delete Account'.tr,
+                style: GoogleFonts.poppins(color: Colors.red),
+              ),
+              onTap: () {
+                // Handle Logout
+                Navigator.pop(context); // Close the drawer
+                // Implement logout functionality
+                showDialog(
+                  context: context,
+                  builder: (context) => AlertDialog(
+                    backgroundColor: Colors.white,
+                    title: Text(
+                      'Delete'.tr,
+                      style: GoogleFonts.poppins(),
+                    ),
+                    content: Text('Are you sure you want to delete account ?'.tr,
+                        style: GoogleFonts.poppins()),
+                    actions: [
+                      TextButton(
+                        onPressed: () {
+                          Navigator.pop(context);
+                        }, // Cancel logout
+                        child:
+                        Text('Cancel'.tr, style: GoogleFonts.poppins(color: Colors.red)),
+                      ),
+                      TextButton(
+                        onPressed: () async {
+
+                          Navigator.pop(context);
+
+
+                          await _schoolControler.deleteAccount();
+
+                        },
+                        child:
+                        Text('Delete'.tr, style: GoogleFonts.poppins(color: Colors.blue)),
+                      ),
+                    ],
+                  ),
+                );
+              },
+            ),
+            ListTile(
               leading: Icon(Icons.exit_to_app, color: Colors.red),
               title: Text("Logout",
                   style: GoogleFonts.poppins(

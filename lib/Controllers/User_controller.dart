@@ -35,7 +35,7 @@ class UserController extends GetxController {
    Is_sub_Catgorgy.refresh();
     categories.value = [
       {'name': 'Education', 'image': 'assets/Categories/eduaction.png'},
-      {'name': 'Restaurant', 'image': 'assets/Categories/restaurant.png'},
+     /* {'name': 'Restaurant', 'image': 'assets/Categories/restaurant.png'},
       {'name': 'Hotels', 'image': 'assets/Categories/hotel.png'},
       {'name': 'Tourisme', 'image': 'assets/Categories/tourisme.png'},
       {'name': 'Doctors', 'image': 'assets/Categories/hospital.png'},
@@ -53,7 +53,7 @@ class UserController extends GetxController {
       {'name': 'Games', 'image': 'assets/Categories/games.png'},
       {'name': 'Libraries', 'image': 'assets/Categories/library.png'},
       {'name': 'Electronics', 'image': 'assets/Categories/electronics.png'},
-      {'name': 'Taxi', 'image': 'assets/Categories/taxi.png'},
+      {'name': 'Taxi', 'image': 'assets/Categories/taxi.png'},*/
 
     ];
     categories.refresh();
@@ -63,7 +63,7 @@ class UserController extends GetxController {
 
   RxList<Map<String, String>> categories = [
     {'name': 'Education', 'image': 'assets/Categories/eduaction.png'},
-    {'name': 'Restaurant', 'image': 'assets/Categories/restaurant.png'},
+ /*   {'name': 'Restaurant', 'image': 'assets/Categories/restaurant.png'},
     {'name': 'Hotels', 'image': 'assets/Categories/hotel.png'},
     {'name': 'Tourisme', 'image': 'assets/Categories/tourisme.png'},
     {'name': 'Doctors', 'image': 'assets/Categories/hospital.png'},
@@ -81,7 +81,7 @@ class UserController extends GetxController {
     {'name': 'Games', 'image': 'assets/Categories/games.png'},
     {'name': 'Libraries', 'image': 'assets/Categories/library.png'},
     {'name': 'Electronics', 'image': 'assets/Categories/electronics.png'},
-    {'name': 'Taxi', 'image': 'assets/Categories/taxi.png'},
+    {'name': 'Taxi', 'image': 'assets/Categories/taxi.png'},*/
 
   ].obs;
 
@@ -752,7 +752,7 @@ class UserController extends GetxController {
 
       categories.value = [
         {'name': 'Education', 'image': 'assets/Categories/eduaction.png'},
-        {'name': 'Restaurant', 'image': 'assets/Categories/restaurant.png'},
+        /*{'name': 'Restaurant', 'image': 'assets/Categories/restaurant.png'},
         {'name': 'Hotels', 'image': 'assets/Categories/hotel.png'},
         {'name': 'Tourisme', 'image': 'assets/Categories/tourisme.png'},
         {'name': 'Hospitals', 'image': 'assets/Categories/hospital.png'},
@@ -770,12 +770,15 @@ class UserController extends GetxController {
         {'name': 'Games', 'image': 'assets/Categories/games.png'},
         {'name': 'Libraries', 'image': 'assets/Categories/library.png'},
         {'name': 'Electronics', 'image': 'assets/Categories/electronics.png'},
-        {'name': 'Taxi', 'image': 'assets/Categories/taxi.png'},
+        {'name': 'Taxi', 'image': 'assets/Categories/taxi.png'},*/
 
       ];
       categories.refresh();
     }
   }
+
+
+
 
   RxBool IsCheckingQrCodeTeacher = false.obs;
 
@@ -1437,6 +1440,8 @@ class UserController extends GetxController {
   }
 
 
+ 
+
 
 
 
@@ -1479,6 +1484,60 @@ class UserController extends GetxController {
           backgroundColor: Colors.red, duration: Duration(seconds: 6));
     }
   }
+
+  Future<void> deleteAccount() async {
+    try {
+
+
+      final url = Uri.parse('https://ganto-app.online/public/api/user/delete');
+
+      final response = await http.delete(
+        url,
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer ${prefs.getString("token")}',
+        },
+      );
+
+      if (response.statusCode == 200) {
+
+        Get.snackbar(
+          'Success',
+          'Account deleted successfully',
+          snackPosition: SnackPosition.BOTTOM,
+          backgroundColor: Colors.green,
+         // colorText: Get.theme.colorScheme.primary,
+        );
+        await prefs.remove("token");
+        await prefs.remove("type");
+        await prefs.remove("user");
+        await prefs.remove("token2");
+        await prefs.remove("type2");
+        await prefs.remove("parent");
+        await prefs.remove("teacher");
+        Get.delete<UserController>();
+        Get.offNamed("/intro");
+
+      } else {
+        Get.snackbar(
+          'Error',
+          'Failed to delete account: ${response.statusCode}',
+          snackPosition: SnackPosition.BOTTOM,
+          backgroundColor: Get.theme.colorScheme.error.withOpacity(0.1),
+          colorText: Get.theme.colorScheme.error,
+        );
+      }
+    } catch (e) {
+      Get.snackbar(
+        'Exception',
+        'Something went wrong: $e',
+        snackPosition: SnackPosition.BOTTOM,
+        backgroundColor: Get.theme.colorScheme.error.withOpacity(0.1),
+        colorText: Get.theme.colorScheme.error,
+      );
+    }
+  }
+
 
 
 

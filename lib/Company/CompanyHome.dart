@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 
 import 'package:google_fonts/google_fonts.dart';
 
+import '../main.dart';
 import 'Pages/CompanyFirstHome.dart';
 
 class Companyhome extends StatefulWidget {
@@ -24,6 +25,7 @@ class _CompanyhomeState extends State<Companyhome> {
   @override
   void initState() {
     super.initState();
+
   }
   
   final List<Widget> Pages = [

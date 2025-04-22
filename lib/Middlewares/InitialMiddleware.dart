@@ -28,6 +28,14 @@ class initialMiddleware extends GetMiddleware {
     print(prefs.getString("type2"));
 
 
+
+
+
+
+
+
+
+
     if(prefs.getString("type2")=="teacher")
       {
         String? teacherJson = prefs.getString("teacher");

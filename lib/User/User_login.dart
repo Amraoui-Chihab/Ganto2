@@ -19,7 +19,7 @@ class _UserLoginState extends State<UserLogin> {
   TextEditingController phone_password_controller = new TextEditingController();
   GlobalKey<FormState> _form_key_phone = GlobalKey();
   GlobalKey<FormState> _form_key_email = GlobalKey();
-  String currentLanguage = "English";
+  String currentLanguage = Get.locale?.languageCode == "ar"?"Arabic":"English";
 
 
 
@@ -42,6 +42,30 @@ class _UserLoginState extends State<UserLogin> {
             ),
             child: Stack(
               children: [
+                Positioned(
+                    top: 40,
+                    left: Get.locale?.languageCode == "ar" ? null : 20,
+                    right: Get.locale?.languageCode == "ar" ? 20 : null,
+                    child: GestureDetector(
+                      onTap: () {
+                        Get.back();
+                      },
+                      child: Container(
+                        width: 40,
+                        height: 40,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          shape: BoxShape.circle,
+                        ),
+                        child: Center(
+                          child: Icon(
+                            Icons.arrow_back,
+                            color: Colors.blue,
+                          ),
+                        ),
+                      ),
+                    )
+                ),
                 Positioned(
                   top: screenHeight * 0.05,
                   left: screenWidth / 3,

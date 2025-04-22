@@ -22,7 +22,7 @@ class CompanyController extends GetxController {
 
   RxList<Map<String, String>> categories = [
     {'name': 'Education', 'image': 'assets/Categories/eduaction.png'},
-    {'name': 'Restaurant', 'image': 'assets/Categories/restaurant.png'},
+    /* {'name': 'Restaurant', 'image': 'assets/Categories/restaurant.png'},
     {'name': 'Hotels', 'image': 'assets/Categories/hotel.png'},
     {'name': 'Tourisme', 'image': 'assets/Categories/tourisme.png'},
     {'name': 'Hospitals', 'image': 'assets/Categories/hospital.png'},
@@ -40,7 +40,7 @@ class CompanyController extends GetxController {
     {'name': 'Games', 'image': 'assets/Categories/games.png'},
     {'name': 'Libraries', 'image': 'assets/Categories/library.png'},
     {'name': 'Electronics', 'image': 'assets/Categories/electronics.png'},
-    {'name': 'Taxi', 'image': 'assets/Categories/taxi.png'},
+    {'name': 'Taxi', 'image': 'assets/Categories/taxi.png'},*/
   ].obs;
 
   List<Map<String, String>> SchoolCategoriesForCompany = [
@@ -54,7 +54,7 @@ class CompanyController extends GetxController {
 
       categories.value = [
         {'name': 'Education', 'image': 'assets/Categories/eduaction.png'},
-        {'name': 'Restaurant', 'image': 'assets/Categories/restaurant.png'},
+        /*  {'name': 'Restaurant', 'image': 'assets/Categories/restaurant.png'},
         {'name': 'Hotels', 'image': 'assets/Categories/hotel.png'},
         {'name': 'Tourisme', 'image': 'assets/Categories/tourisme.png'},
         {'name': 'Hospitals', 'image': 'assets/Categories/hospital.png'},
@@ -72,7 +72,7 @@ class CompanyController extends GetxController {
         {'name': 'Games', 'image': 'assets/Categories/games.png'},
         {'name': 'Libraries', 'image': 'assets/Categories/library.png'},
         {'name': 'Electronics', 'image': 'assets/Categories/electronics.png'},
-        {'name': 'Taxi', 'image': 'assets/Categories/taxi.png'},
+        {'name': 'Taxi', 'image': 'assets/Categories/taxi.png'},*/
       ];
       categories.refresh();
     }
@@ -80,8 +80,6 @@ class CompanyController extends GetxController {
 
   void Navigate_Between_Categories(String category) {
     switch (category.toLowerCase()) {
-
-
       case 'education':
         naviagte_to_education_category();
         // Get.to(EducationPage());
@@ -93,12 +91,11 @@ class CompanyController extends GetxController {
 
       default:
         NotYetCategory();
-      // Handle unknown categories
+    // Handle unknown categories
     }
   }
 
-  void NotYetCategory()
-  {
+  void NotYetCategory() {
     var snackBar = SnackBar(
       elevation: 0,
       backgroundColor: Colors.transparent,
@@ -175,9 +172,8 @@ class CompanyController extends GetxController {
     );
   }
 
-  Future<void> SchoolLogin(
-      String schoolEmail, String schoolPassword, BuildContext c) async {
-
+  Future<void> SchoolLogin(String schoolEmail, String schoolPassword,
+      BuildContext c) async {
     Get.dialog(
         Center(
           child: Container(
@@ -222,8 +218,6 @@ class CompanyController extends GetxController {
       );
       Get.back();
       if (response.statusCode == 200) {
-
-
         final data = jsonDecode(response.body);
 
         School school = School.fromJson(data["school"]);
@@ -234,7 +228,8 @@ class CompanyController extends GetxController {
           Get.find<SchoolController>().updateSchool(school);
         } else {
           // If controller does not exist, create and register it
-          Get.put(SchoolController()..updateSchool(school), permanent: true);
+          Get.put(SchoolController()
+            ..updateSchool(school), permanent: true);
         }
 
         // Get.put(SchoolController(school), permanent: true);
@@ -248,7 +243,6 @@ class CompanyController extends GetxController {
 
         // Handle successful login (e.g., store token, navigate to home screen)
       } else {
-
         var snackBar = SnackBar(
           elevation: 0,
           backgroundColor: Colors.transparent,
@@ -270,6 +264,7 @@ class CompanyController extends GetxController {
     } catch (e) {
       Get.back();
       var snackBar = SnackBar(
+
         /// need to set following properties for best effect of awesome_snackbar_content
         elevation: 0,
         behavior: SnackBarBehavior.floating,
@@ -292,8 +287,7 @@ class CompanyController extends GetxController {
     }
   }
 
-  Future<void> createNewSchool(
-      String schoolName,
+  Future<void> createNewSchool(String schoolName,
       String email,
       String password,
       String phone,
@@ -302,10 +296,6 @@ class CompanyController extends GetxController {
       DateTime creationDate,
       BuildContext c,
       File? image) async {
-
-
-
-
     String? base64LogoImage;
     if (image != null) {
       List<int> logoBytes = await image.readAsBytes();
@@ -342,11 +332,15 @@ class CompanyController extends GetxController {
             child: Row(
               mainAxisSize: MainAxisSize.min, // Wraps content properly
               children: [
-                Lottie.asset('assets/loading.json', width: 100, height: 100,fit: BoxFit.fitHeight),
+                Lottie.asset('assets/loading.json', width: 100,
+                    height: 100,
+                    fit: BoxFit.fitHeight),
                 SizedBox(width: 10), // Add spacing between animation and text
                 Text(
                   "Please Wait ...",
-                  style: GoogleFonts.poppins(fontSize: 20, decoration: TextDecoration.none,color: Colors.blue),
+                  style: GoogleFonts.poppins(fontSize: 20,
+                      decoration: TextDecoration.none,
+                      color: Colors.blue),
                   overflow: TextOverflow.ellipsis,
                 )
               ],
@@ -384,7 +378,6 @@ class CompanyController extends GetxController {
       );
       Get.back();
       if (response.statusCode == 201 || response.statusCode == 200) {
-
         // Get.offNamed("/Categories");
         var snackBar = SnackBar(
           elevation: 0,
@@ -394,7 +387,8 @@ class CompanyController extends GetxController {
 
           content: AwesomeSnackbarContent(
             messageTextStyle: GoogleFonts.poppins(),
-            titleTextStyle: GoogleFonts.poppins(fontWeight: FontWeight.bold,fontSize: 20),
+            titleTextStyle: GoogleFonts.poppins(
+                fontWeight: FontWeight.bold, fontSize: 20),
             color: Colors.green,
             title: 'Notification',
             message: "School Created Successfully",
@@ -406,24 +400,21 @@ class CompanyController extends GetxController {
           ..hideCurrentSnackBar()
           ..showSnackBar(snackBar);
         Get.offNamed("/Company_Home");
-
       }
       else {
-
         var error = jsonDecode(response.body);
         var snackBar = SnackBar(
           elevation: 0,
-
 
 
           backgroundColor: Colors.transparent,
           duration: Duration(seconds: 7),
 
 
-
           content: AwesomeSnackbarContent(
             messageTextStyle: GoogleFonts.poppins(),
-            titleTextStyle: GoogleFonts.poppins(fontWeight: FontWeight.bold,fontSize: 20),
+            titleTextStyle: GoogleFonts.poppins(
+                fontWeight: FontWeight.bold, fontSize: 20),
             color: Colors.red,
             title: 'Error',
             message: error["message"],
@@ -436,11 +427,10 @@ class CompanyController extends GetxController {
         ScaffoldMessenger.of(Get.context!)
           ..hideCurrentSnackBar()
           ..showSnackBar(snackBar);
-
-
       }
     } catch (e) {
       var snackBar = SnackBar(
+
         /// need to set following properties for best effect of awesome_snackbar_content
         elevation: 0,
         behavior: SnackBarBehavior.floating,
@@ -450,7 +440,8 @@ class CompanyController extends GetxController {
           message:
           "Connection Error !",
           messageTextStyle: GoogleFonts.poppins(),
-          titleTextStyle: GoogleFonts.poppins(fontWeight: FontWeight.bold,fontSize: 20),
+          titleTextStyle: GoogleFonts.poppins(
+              fontWeight: FontWeight.bold, fontSize: 20),
 
           /// change contentType to ContentType.success, ContentType.warning or ContentType.help for variants
           contentType: ContentType.failure,
@@ -472,7 +463,6 @@ class CompanyController extends GetxController {
   }
 
 
-
   var company = Rx<Company?>(null);
 
   void updateCompany(Company newcompany) {
@@ -483,7 +473,7 @@ class CompanyController extends GetxController {
 
     categories.value = [
       {'name': 'Education', 'image': 'assets/Categories/eduaction.png'},
-      {'name': 'Restaurant', 'image': 'assets/Categories/restaurant.png'},
+      /* {'name': 'Restaurant', 'image': 'assets/Categories/restaurant.png'},
       {'name': 'Hotels', 'image': 'assets/Categories/hotel.png'},
       {'name': 'Tourisme', 'image': 'assets/Categories/tourisme.png'},
       {'name': 'Doctors', 'image': 'assets/Categories/hospital.png'},
@@ -501,24 +491,13 @@ class CompanyController extends GetxController {
       {'name': 'Games', 'image': 'assets/Categories/games.png'},
       {'name': 'Libraries', 'image': 'assets/Categories/library.png'},
       {'name': 'Electronics', 'image': 'assets/Categories/electronics.png'},
-      {'name': 'Taxi', 'image': 'assets/Categories/taxi.png'},
+      {'name': 'Taxi', 'image': 'assets/Categories/taxi.png'},*/
     ];
     categories.refresh();
   }
 
 
-
-
-
-
-
-
-
-
-
-
   Future<void> Change_Company_Email(String Email) async {
-
     Get.dialog(
         Center(
           child: Container(
@@ -560,8 +539,6 @@ class CompanyController extends GetxController {
       var data = jsonDecode(response.body);
       Get.back();
       if (response.statusCode == 200) {
-
-
         var snackBar = SnackBar(
           elevation: 0,
           backgroundColor: Colors.transparent,
@@ -608,6 +585,7 @@ class CompanyController extends GetxController {
       Get.back();
 
       var snackBar = SnackBar(
+
         /// need to set following properties for best effect of awesome_snackbar_content
         elevation: 0,
         backgroundColor: Colors.transparent,
@@ -668,16 +646,14 @@ class CompanyController extends GetxController {
       Get.back();
 
 
-      var data =jsonDecode(response.body);
+     // var data = jsonDecode(response.body);
       if (response.statusCode == 200) {
-
         prefs.remove("token");
         prefs.remove("type");
         prefs.remove("company");
         Get.delete<CompanyController>();
 
         Get.offNamed("/intro");
-
       } else {
         var snackBar = SnackBar(
           elevation: 0,
@@ -703,6 +679,7 @@ class CompanyController extends GetxController {
       print(e.toString());
 
       var snackBar = SnackBar(
+
         /// need to set following properties for best effect of awesome_snackbar_content
         elevation: 0,
         backgroundColor: Colors.transparent,
@@ -774,7 +751,7 @@ class CompanyController extends GetxController {
           content: AwesomeSnackbarContent(
             messageTextStyle: GoogleFonts.poppins(),
             titleTextStyle:
-                GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 20),
+            GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 20),
             color: Colors.green,
             title: 'Success',
             message: "Logo Updated Succesefully",
@@ -796,7 +773,7 @@ class CompanyController extends GetxController {
           content: AwesomeSnackbarContent(
             messageTextStyle: GoogleFonts.poppins(),
             titleTextStyle:
-                GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 20),
+            GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 20),
             color: Colors.red,
             title: 'Error',
             message: data["message"],
@@ -813,6 +790,7 @@ class CompanyController extends GetxController {
       Get.back();
 
       var snackBar = SnackBar(
+
         /// need to set following properties for best effect of awesome_snackbar_content
         elevation: 0,
         backgroundColor: Colors.transparent,
@@ -821,7 +799,7 @@ class CompanyController extends GetxController {
           message: "Connection Error !",
           messageTextStyle: GoogleFonts.poppins(),
           titleTextStyle:
-              GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 20),
+          GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 20),
 
           /// change contentType to ContentType.success, ContentType.warning or ContentType.help for variants
           contentType: ContentType.failure,
@@ -834,9 +812,6 @@ class CompanyController extends GetxController {
         ..showSnackBar(snackBar);
     }
   }
-
-
-
 
 
   Future<void> Change_Company_Description(String Description) async {
@@ -895,7 +870,7 @@ class CompanyController extends GetxController {
           content: AwesomeSnackbarContent(
             messageTextStyle: GoogleFonts.poppins(),
             titleTextStyle:
-                GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 20),
+            GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 20),
             color: Colors.green,
             title: 'Notification',
             message: "Description Updated Succesefully",
@@ -912,7 +887,7 @@ class CompanyController extends GetxController {
           content: AwesomeSnackbarContent(
             messageTextStyle: GoogleFonts.poppins(),
             titleTextStyle:
-                GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 20),
+            GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 20),
             color: Colors.red,
             title: 'Error',
             message: data["error"],
@@ -928,6 +903,7 @@ class CompanyController extends GetxController {
       Get.back();
 
       var snackBar = SnackBar(
+
         /// need to set following properties for best effect of awesome_snackbar_content
         elevation: 0,
         behavior: SnackBarBehavior.floating,
@@ -937,7 +913,7 @@ class CompanyController extends GetxController {
           message: "Connection Error !",
           messageTextStyle: GoogleFonts.poppins(),
           titleTextStyle:
-              GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 20),
+          GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 20),
 
           /// change contentType to ContentType.success, ContentType.warning or ContentType.help for variants
           contentType: ContentType.failure,
@@ -952,14 +928,13 @@ class CompanyController extends GetxController {
 
   Future<void> Change_Company_Phone(String phone) async {
     if (phone.isEmpty) {
-
       var snackBar = SnackBar(
         elevation: 0,
         backgroundColor: Colors.transparent,
         content: AwesomeSnackbarContent(
           messageTextStyle: GoogleFonts.poppins(),
           titleTextStyle:
-              GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 20),
+          GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 20),
           color: Colors.red,
           title: 'Error',
           message: "Please Enter Phone",
@@ -1004,7 +979,6 @@ class CompanyController extends GetxController {
         barrierDismissible: false, // Prevents dismissing the dialog
         useSafeArea: true);
     try {
-
       final response = await http.post(
           Uri.parse('https://ganto-app.online/public/api/company/change_phone'),
           body: {
@@ -1037,7 +1011,7 @@ class CompanyController extends GetxController {
         var data = jsonDecode(response.body);
         Company company = Company.fromJson(data["company"]);
 
-        this.company.value=company;
+        this.company.value = company;
         this.company.refresh();
         String companyJson =
         jsonEncode(company.toJson()); // Proper JSON encoding
@@ -1068,6 +1042,7 @@ class CompanyController extends GetxController {
       Get.back();
 
       var snackBar = SnackBar(
+
         /// need to set following properties for best effect of awesome_snackbar_content
         elevation: 0,
         behavior: SnackBarBehavior.floating,
@@ -1140,7 +1115,7 @@ class CompanyController extends GetxController {
           content: AwesomeSnackbarContent(
             messageTextStyle: GoogleFonts.poppins(),
             titleTextStyle:
-                GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 20),
+            GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 20),
             color: Colors.green,
             title: 'Success',
             message: "Name Updated Succesefully",
@@ -1163,7 +1138,7 @@ class CompanyController extends GetxController {
           content: AwesomeSnackbarContent(
             messageTextStyle: GoogleFonts.poppins(),
             titleTextStyle:
-                GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 20),
+            GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 20),
             color: Colors.red,
             title: 'Error',
             message: error["error"],
@@ -1179,6 +1154,7 @@ class CompanyController extends GetxController {
       Get.back();
 
       var snackBar = SnackBar(
+
         /// need to set following properties for best effect of awesome_snackbar_content
         elevation: 0,
         behavior: SnackBarBehavior.floating,
@@ -1188,7 +1164,7 @@ class CompanyController extends GetxController {
           message: "Connection Error !",
           messageTextStyle: GoogleFonts.poppins(),
           titleTextStyle:
-              GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 20),
+          GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 20),
 
           /// change contentType to ContentType.success, ContentType.warning or ContentType.help for variants
           contentType: ContentType.failure,
@@ -1201,34 +1177,55 @@ class CompanyController extends GetxController {
     }
   }
 
-  Future<void> deleteCompany(int id) async {
-    final url = Uri.parse('https://ganto-app.online/public/api/companies/$id');
 
+  Future<void> deleteAccount() async {
     try {
+      final url = Uri.parse(
+          'https://ganto-app.online/public/api/company/delete');
+
       final response = await http.delete(
         url,
         headers: {
+          'Content-Type': 'application/json',
           'Authorization': 'Bearer ${prefs.getString("token")}',
-          'Accept': 'application/json',
         },
       );
 
       if (response.statusCode == 200) {
-        prefs.remove("token");
-        Get.delete<CompanyController>();
+        Get.snackbar(
+          'Success',
+          'Account deleted successfully',
+          snackPosition: SnackPosition.BOTTOM,
+          backgroundColor: Get.theme.colorScheme.primary.withOpacity(0.1),
+          colorText: Get.theme.colorScheme.primary,
+        );
+        await prefs.remove("token");
+        await prefs.remove("type");
+        await prefs.remove("company");
+        await prefs.remove("token2");
+        await prefs.remove("type2");
+        await prefs.remove("director");
 
+        Get.delete<CompanyController>();
         Get.offNamed("/intro");
-        print("Company deleted successfully");
-        Get.snackbar("Success", "Company deleted successfully");
-      } else if (response.statusCode == 404) {
-        Get.snackbar("Error", "Company not found or not authorized");
       } else {
-        print(response.statusCode);
-        print(response.body);
-        Get.snackbar("Error", "Failed to delete company");
+        Get.snackbar(
+          'Error',
+          'Failed to delete account: ${response.statusCode}',
+          snackPosition: SnackPosition.BOTTOM,
+          backgroundColor: Get.theme.colorScheme.error.withOpacity(0.1),
+          colorText: Get.theme.colorScheme.error,
+        );
       }
     } catch (e) {
-      Get.snackbar("Error", "An error occurred: $e");
+      Get.snackbar(
+        'Exception',
+        'Something went wrong: $e',
+        snackPosition: SnackPosition.BOTTOM,
+        backgroundColor: Get.theme.colorScheme.error.withOpacity(0.1),
+        colorText: Get.theme.colorScheme.error,
+      );
     }
   }
+
 }

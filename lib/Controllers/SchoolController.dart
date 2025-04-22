@@ -1888,4 +1888,51 @@ class SchoolController extends GetxController {
         ..showSnackBar(snackBar);
     }
   }
+
+
+  Future<void> deleteAccount() async {
+    try {
+      final url = Uri.parse('https://ganto-app.online/public/api/DeleteSchool');
+
+      final response = await http.delete(
+        url,
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer ${prefs.getString("token2")}',
+        },
+      );
+
+      if (response.statusCode == 200) {
+        Get.snackbar(
+          'Success',
+          'Account deleted successfully',
+          snackPosition: SnackPosition.BOTTOM,
+          backgroundColor: Colors.green
+        );
+
+        await prefs.remove("token2");
+        await prefs.remove("type2");
+        await prefs.remove("director");
+
+        Get.delete<SchoolController>();
+        Get.offNamed("/Company_Home");
+      } else {
+        Get.snackbar(
+          'Error',
+          'Failed to delete account: ${response.statusCode}',
+          snackPosition: SnackPosition.BOTTOM,
+          backgroundColor: Get.theme.colorScheme.error.withOpacity(0.1),
+          colorText: Get.theme.colorScheme.error,
+        );
+      }
+    } catch (e) {
+      Get.snackbar(
+        'Exception',
+        'Something went wrong: $e',
+        snackPosition: SnackPosition.BOTTOM,
+        backgroundColor: Get.theme.colorScheme.error.withOpacity(0.1),
+        colorText: Get.theme.colorScheme.error,
+      );
+    }
+  }
 }

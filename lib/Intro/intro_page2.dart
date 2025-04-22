@@ -10,7 +10,7 @@ class IntroductionPage2 extends StatefulWidget {
 }
 
 class _IntroductionPage2State extends State<IntroductionPage2> {
-  String currentlanguage = "English";
+  String currentlanguage = Get.locale?.languageCode == "ar"?"Arabic":"English";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,13 +25,39 @@ class _IntroductionPage2State extends State<IntroductionPage2> {
         ),
         child: Stack(
           children: [
+            // Circular Back Button - positioned based on language
+            Positioned(
+                top: 40,
+                left: Get.locale?.languageCode == "ar" ? null : 20,
+                right: Get.locale?.languageCode == "ar" ? 20 : null,
+                child: GestureDetector(
+                  onTap: () {
+                    Get.back();
+                  },
+                  child: Container(
+                    width: 40,
+                    height: 40,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      shape: BoxShape.circle,
+                    ),
+                    child: Center(
+                      child: Icon(
+                        Icons.arrow_back,
+                        color: Colors.blue,
+                      ),
+                    ),
+                  ),
+                )
+            ),
+
             // Text Positioned on Background Image
             Container(
               margin: EdgeInsets.only(
                   top: Get.height * 0.5 / 10,
                   left: Get.width / 2.6,
                   right:
-                      Get.locale?.languageCode == "en" ? 0 : Get.width / 3.7),
+                  Get.locale?.languageCode == "en" ? 0 : Get.width / 3.7),
               child: DropdownButton<String>(
                 value: currentlanguage,
 
@@ -43,8 +69,10 @@ class _IntroductionPage2State extends State<IntroductionPage2> {
                 onChanged: (String? newValue) {
                   if (newValue == "English") {
                     Get.updateLocale(Locale('en'));
+                    currentlanguage = "English";
                   } else {
                     Get.updateLocale(Locale('ar'));
+                    currentlanguage = "Arabic";
                   }
                   setState(() {
                     currentlanguage = newValue!;

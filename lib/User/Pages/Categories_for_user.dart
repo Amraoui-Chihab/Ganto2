@@ -137,12 +137,58 @@ class _CategoriesForUserState extends State<CategoriesForUser> {
               ),
               ListTile(
                 leading: Icon(
+                  Icons.delete,
+                  color: Colors.red,
+                ),
+                title: Text(
+                  'Delete Account'.tr,
+                  style: GoogleFonts.poppins(color: Colors.red),
+                ),
+                onTap: () {
+                  Navigator.pop(context); // Close the drawer
+                  // Implement logout functionality
+                  showDialog(
+                    context: context,
+                    builder: (context) => AlertDialog(
+                      backgroundColor: Colors.white,
+                      title: Text(
+                        'Delete Account'.tr,
+                        style: GoogleFonts.poppins(),
+                      ),
+                      content: Text('Are you sure you want to delete the account ?'.tr,
+                          style: GoogleFonts.poppins()),
+                      actions: [
+                        TextButton(
+                          onPressed: () {
+                            Navigator.pop(context);
+                          }, // Cancel logout
+                          child:
+                          Text('Cancel'.tr, style: GoogleFonts.poppins(color: Colors.red)),
+                        ),
+                        TextButton(
+                          onPressed: () async {
+                            // Confirm logout
+                            Navigator.pop(context); // Close dialog
+                            // Redirect or clear user data
+                            await userController.deleteAccount();
+
+                          },
+                          child:
+                          Text('Delete'.tr, style: GoogleFonts.poppins(color: Colors.blue)),
+                        ),
+                      ],
+                    ),
+                  );
+                },
+              ),
+              ListTile(
+                leading: Icon(
                   Icons.logout,
-                  color: Colors.blue,
+                  color: Colors.red,
                 ),
                 title: Text(
                   'Logout'.tr,
-                  style: GoogleFonts.poppins(),
+                  style: GoogleFonts.poppins(color: Colors.red),
                 ),
                 onTap: () {
                   Navigator.pop(context); // Close the drawer

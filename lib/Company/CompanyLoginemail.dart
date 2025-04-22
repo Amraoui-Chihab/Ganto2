@@ -19,7 +19,7 @@ class Companyloginemail extends StatefulWidget {
 }
 
 class _CompanyloginemailState extends State<Companyloginemail> {
-  String currentLanguage = "English";
+  String currentLanguage = Get.locale?.languageCode == "ar"?"Arabic":"English";
 
   bool showpassword = false;
 
@@ -47,6 +47,30 @@ class _CompanyloginemailState extends State<Companyloginemail> {
             ),
             child: Stack(
               children: [
+                Positioned(
+                    top: 40,
+                    left: Get.locale?.languageCode == "ar" ? null : 20,
+                    right: Get.locale?.languageCode == "ar" ? 20 : null,
+                    child: GestureDetector(
+                      onTap: () {
+                        Get.back();
+                      },
+                      child: Container(
+                        width: 40,
+                        height: 40,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          shape: BoxShape.circle,
+                        ),
+                        child: Center(
+                          child: Icon(
+                            Icons.arrow_back,
+                            color: Colors.blue,
+                          ),
+                        ),
+                      ),
+                    )
+                ),
                 // Language Dropdown
                 Positioned(
                   top: screenHeight * 0.05,
