@@ -50,12 +50,11 @@
 		<key>UIViewControllerBasedStatusBarAppearance</key>
 		<false/>
 		<key>NSCameraUsageDescription</key>
-        <string>This app requires camera access to allow users to take photos or videos.</string>
-        <key>NSMicrophoneUsageDescription</key>
-        <string>This app needs microphone access for recording audio or videos.</string>
+        <string>This app requires camera access to scan QR codes using your device's camera.</string>
 
         <key>NSPhotoLibraryUsageDescription</key>
-        <string>This app needs access to your photo library to upload or save images.</string>
+        <string>This app needs access to your photo library to scan QR codes from saved images.</string>
+
 
 
 	</dict>
