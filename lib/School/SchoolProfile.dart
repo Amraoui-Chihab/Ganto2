@@ -90,8 +90,8 @@ class SchoolProfile extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Obx(() => BuildFieldData("School Email",
-                      _schoolController.school.value!.schoolEmail)),
+                  /*Obx(() => BuildFieldData("School Email",
+                      _schoolController.school.value!.schoolEmail)),*/
                   Obx(() => BuildFieldData("School Phone",
                       _schoolController.school.value!.schoolPhone)),
                   Obx(() => BuildFieldData("Director Name",

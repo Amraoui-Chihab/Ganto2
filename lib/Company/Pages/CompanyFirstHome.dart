@@ -5,9 +5,6 @@ import 'package:Ganto/Controllers/Company_controller.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-
-
-
 class Companyfirsthome extends StatefulWidget {
   const Companyfirsthome({super.key});
 
@@ -16,29 +13,22 @@ class Companyfirsthome extends StatefulWidget {
 }
 
 class _CompanyfirsthomeState extends State<Companyfirsthome> {
-
-
-
-
-
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-   // companyController.Get_Top_Selled_Products();
+    // companyController.Get_Top_Selled_Products();
   }
-  
-  CompanyController companyController = Get.find<CompanyController>();
- // GeneralController _GeneralController = Get.find<GeneralController>();
 
-  String currentlanguage ="English";
-  
+  CompanyController companyController = Get.find<CompanyController>();
+  // GeneralController _GeneralController = Get.find<GeneralController>();
+
+  String currentlanguage = "English";
+
   @override
   Widget build(BuildContext context) {
-  
     return WillPopScope(
         child: Scaffold(
-          
           drawer: Drawer(
             child: SingleChildScrollView(
               child: Column(
@@ -82,7 +72,8 @@ class _CompanyfirsthomeState extends State<Companyfirsthome> {
                             child: Text(
                               companyController.company.value!.companyEmail !=
                                       null
-                                  ? "Email".tr +" : "+
+                                  ? "Email".tr +
+                                      " : " +
                                       companyController
                                           .company.value!.companyEmail!
                                   : "No Email".tr,
@@ -94,14 +85,13 @@ class _CompanyfirsthomeState extends State<Companyfirsthome> {
                           Container(
                             margin: EdgeInsets.only(top: 5, bottom: 5),
                             child: Text(
-                            
                               companyController.company.value!.companyPhone !=
                                       null
                                   ? "Phone : ".tr +
                                       companyController
                                           .company.value!.companyPhone!
                                   : "no phone".tr,
-                                  textDirection: TextDirection.ltr,
+                              textDirection: TextDirection.ltr,
                               style: GoogleFonts.poppins(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold),
@@ -112,10 +102,8 @@ class _CompanyfirsthomeState extends State<Companyfirsthome> {
                     ),
                   ),
 
-                  
-
                   // Functionalities
-                 /* ListTile(
+                  /* ListTile(
                     leading: Icon(Icons.factory, color: Colors.blue),
                     // Adjust padding for indentation
                     title: Text(
@@ -127,7 +115,7 @@ class _CompanyfirsthomeState extends State<Companyfirsthome> {
                       Get.to(() => ShowCompaniesForCompany());
                     },
                   ),*/
-                /*  ListTile(
+                  /*  ListTile(
                     leading: Icon(
                       Icons.inventory,
                       color: Colors.blue,
@@ -141,7 +129,7 @@ class _CompanyfirsthomeState extends State<Companyfirsthome> {
                     },
                   ),*/
 
-                 /* ListTile(
+                  /* ListTile(
                     leading: Icon(
                       Icons.contact_support_rounded,
                       color: Colors.blue,
@@ -213,9 +201,9 @@ class _CompanyfirsthomeState extends State<Companyfirsthome> {
                     leading: Icon(Icons.change_circle, color: Colors.blue),
                     // Adjust padding for indentation
                     title: Text(
-                        'Change Language'.tr,
-                        style: GoogleFonts.poppins(),
-                      ),
+                      'Change Language'.tr,
+                      style: GoogleFonts.poppins(),
+                    ),
                     onTap: () async {
                       Navigator.pop(context); // Close the drawer
                       // Implement logout functionality
@@ -228,41 +216,33 @@ class _CompanyfirsthomeState extends State<Companyfirsthome> {
                             style: GoogleFonts.poppins(),
                           ),
                           content: DropdownButton<String>(
-                                value: currentlanguage,
-                               
-                                icon: Icon(Icons.arrow_drop_down,
-                                    color: Colors.black),
-                                dropdownColor: Colors.white,
-                                style: TextStyle(color: Colors.black),
-                                underline:
-                                    SizedBox(), // Remove default underline
-                                onChanged: (String? newValue) {
-                                 currentlanguage = newValue!;
-                                    if(newValue=="English")
-                                    {
-                                      
-                                      Get.updateLocale(Locale('en'));
-                                    }
-                                    else
-                                    {
-                                      
-                                      Get.updateLocale(Locale('ar'));
-                                    }
-                                    Navigator.pop(context);
+                            value: currentlanguage,
 
-                                  
-                                },
-                                items: <String>[
-                                  'English',
-                                  'Arabic',
-                                ].map<DropdownMenuItem<String>>((String value) {
-                                  return DropdownMenuItem<String>(
-                                    value: value,
-                                    child: Text(value),
-                                  );
-                                }).toList(),
-                              ),
-                         /* actions: [
+                            icon: Icon(Icons.arrow_drop_down,
+                                color: Colors.black),
+                            dropdownColor: Colors.white,
+                            style: TextStyle(color: Colors.black),
+                            underline: SizedBox(), // Remove default underline
+                            onChanged: (String? newValue) {
+                              currentlanguage = newValue!;
+                              if (newValue == "English") {
+                                Get.updateLocale(Locale('en'));
+                              } else {
+                                Get.updateLocale(Locale('ar'));
+                              }
+                              Navigator.pop(context);
+                            },
+                            items: <String>[
+                              'English',
+                              'Arabic',
+                            ].map<DropdownMenuItem<String>>((String value) {
+                              return DropdownMenuItem<String>(
+                                value: value,
+                                child: Text(value),
+                              );
+                            }).toList(),
+                          ),
+                          /* actions: [
                             TextButton(
                               onPressed: () {
                                 Navigator.pop(context);
@@ -276,7 +256,7 @@ class _CompanyfirsthomeState extends State<Companyfirsthome> {
                                 Navigator.pop(context); // Close dialog
                                 // Redirect or clear user data
 
-                               
+
                               },
                               child:
                                   Text('Ok', style: GoogleFonts.poppins()),
@@ -299,7 +279,7 @@ class _CompanyfirsthomeState extends State<Companyfirsthome> {
                       Get.toNamed("/About_Us");
                     },
                   ),
-                   /*ListTile(
+                  /*ListTile(
                     leading: Icon(
                       Icons.info_outline,
                       color: Colors.blue,
@@ -326,39 +306,95 @@ class _CompanyfirsthomeState extends State<Companyfirsthome> {
                       // Handle Logout
                       Navigator.pop(context); // Close the drawer
                       // Implement logout functionality
+                      TextEditingController passwordController = TextEditingController();
+                      bool _obscurePassword = true;
+
                       showDialog(
                         context: context,
-                        builder: (context) => AlertDialog(
-                          backgroundColor: Colors.white,
-                          title: Text(
-                            'Delete'.tr,
-                            style: GoogleFonts.poppins(),
-                          ),
-                          content: Text('Are you sure you want to delete account ?'.tr,
-                              style: GoogleFonts.poppins()),
-                          actions: [
-                            TextButton(
-                              onPressed: () {
-                                Navigator.pop(context);
-                              }, // Cancel logout
-                              child:
-                              Text('Cancel'.tr, style: GoogleFonts.poppins(color: Colors.red)),
+                        builder: (context) {
+                          bool _obscurePassword = true;
+                          return StatefulBuilder(
+                            builder: (context, setState) => AlertDialog(
+                              backgroundColor: Colors.white,
+                              title: Text(
+                                'Delete'.tr,
+                                style: GoogleFonts.poppins(fontWeight: FontWeight.bold),
+                              ),
+                              content: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Please Enter Your Password To Confirm Account Delete'.tr,
+                                    style: GoogleFonts.poppins(),
+                                  ),
+                                  const SizedBox(height: 16),
+                                  TextFormField(
+                                    controller: passwordController,
+                                    obscureText: _obscurePassword,
+                                    decoration: InputDecoration(
+                                      prefixIcon: const Icon(Icons.lock_outline),
+                                      suffixIcon: IconButton(
+                                        icon: Icon(
+                                          _obscurePassword ? Icons.visibility_off : Icons.visibility,
+                                          color: Colors.blue,
+                                        ),
+                                        onPressed: () {
+                                          setState(() {
+                                            _obscurePassword = !_obscurePassword;
+                                          });
+                                        },
+                                      ),
+                                      hintText: 'Enter your password'.tr,
+                                      border: OutlineInputBorder(
+                                        borderRadius: BorderRadius.circular(10),
+                                        borderSide: const BorderSide(color: Colors.blue),
+                                      ),
+                                      enabledBorder: OutlineInputBorder(
+                                        borderRadius: BorderRadius.circular(10),
+                                        borderSide: const BorderSide(color: Colors.blue),
+                                      ),
+                                      focusedBorder: OutlineInputBorder(
+                                        borderRadius: BorderRadius.circular(10),
+                                        borderSide: const BorderSide(color: Colors.blue, width: 2),
+                                      ),
+                                      filled: true,
+                                      fillColor: Colors.grey[100],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              actions: [
+                                TextButton(
+                                  onPressed: () {
+                                    Navigator.pop(context);
+                                  },
+                                  child: Text(
+                                    'Cancel'.tr,
+                                    style: GoogleFonts.poppins(color: Colors.red),
+                                  ),
+                                ),
+                                TextButton(
+                                  onPressed: () async {
+                                    if (passwordController.text.isEmpty) {
+                                      Get.snackbar("Alert", "Please Enter Your Password",
+                                          backgroundColor: Colors.red);
+                                    } else {
+                                      Navigator.pop(context);
+                                      await companyController.deleteAccount(passwordController.text);
+                                    }
+                                  },
+                                  child: Text(
+                                    'Delete'.tr,
+                                    style: GoogleFonts.poppins(color: Colors.blue),
+                                  ),
+                                ),
+                              ],
                             ),
-                            TextButton(
-                              onPressed: () async {
-
-                                Navigator.pop(context);
-
-
-                                await companyController.deleteAccount();
-
-                              },
-                              child:
-                              Text('Logout'.tr, style: GoogleFonts.poppins(color: Colors.blue)),
-                            ),
-                          ],
-                        ),
+                          );
+                        },
                       );
+
                     },
                   ),
 
@@ -390,20 +426,19 @@ class _CompanyfirsthomeState extends State<Companyfirsthome> {
                               onPressed: () {
                                 Navigator.pop(context);
                               }, // Cancel logout
-                              child:
-                                  Text('Cancel'.tr, style: GoogleFonts.poppins(color: Colors.red)),
+                              child: Text('Cancel'.tr,
+                                  style:
+                                      GoogleFonts.poppins(color: Colors.red)),
                             ),
                             TextButton(
                               onPressed: () async {
-
                                 Navigator.pop(context);
 
-
-                                  await companyController.logout();
-
+                                await companyController.logout();
                               },
-                              child:
-                                  Text('Logout'.tr, style: GoogleFonts.poppins(color: Colors.blue)),
+                              child: Text('Logout'.tr,
+                                  style:
+                                      GoogleFonts.poppins(color: Colors.blue)),
                             ),
                           ],
                         ),
@@ -415,15 +450,16 @@ class _CompanyfirsthomeState extends State<Companyfirsthome> {
             ),
             backgroundColor: Colors.white,
           ),
-          floatingActionButton: Obx(() => companyController.Is_sub_Catgorgy.value
-              ? FloatingActionButton(
-              backgroundColor: Colors.blue,
-              child: Icon(
-                Icons.arrow_back,
-                color: Colors.white,
-              ),
-              onPressed: () => companyController.NavigateBack())
-              : SizedBox.shrink()),
+          floatingActionButton:
+              Obx(() => companyController.Is_sub_Catgorgy.value
+                  ? FloatingActionButton(
+                      backgroundColor: Colors.blue,
+                      child: Icon(
+                        Icons.arrow_back,
+                        color: Colors.white,
+                      ),
+                      onPressed: () => companyController.NavigateBack())
+                  : SizedBox.shrink()),
           appBar: AppBar(
             automaticallyImplyLeading: true,
             title: Text(
@@ -435,24 +471,24 @@ class _CompanyfirsthomeState extends State<Companyfirsthome> {
             backgroundColor: Colors.blue,
           ),
           body: Obx(() => Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: GridView.builder(
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2, // Number of columns
-                crossAxisSpacing: 16.0, // Spacing between columns
-                mainAxisSpacing: 16.0, // Spacing between rows
-              ),
-              itemCount: companyController.categories.length,
-              itemBuilder: (context, index) {
-                return Obx(() => CategoryCardCompany(
-
-                  name: companyController.categories.value[index]['name']!,
-                  imagePath: companyController.categories.value[index]
-                  ['image']!,
-                ));
-              },
-            ),
-          )),
+                padding: const EdgeInsets.all(16.0),
+                child: GridView.builder(
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2, // Number of columns
+                    crossAxisSpacing: 16.0, // Spacing between columns
+                    mainAxisSpacing: 16.0, // Spacing between rows
+                  ),
+                  itemCount: companyController.categories.length,
+                  itemBuilder: (context, index) {
+                    return Obx(() => CategoryCardCompany(
+                          name: companyController.categories.value[index]
+                              ['name']!,
+                          imagePath: companyController.categories.value[index]
+                              ['image']!,
+                        ));
+                  },
+                ),
+              )),
           backgroundColor: Colors.white,
         ),
         onWillPop: () async {

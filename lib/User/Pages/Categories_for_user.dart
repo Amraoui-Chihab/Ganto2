@@ -147,38 +147,94 @@ class _CategoriesForUserState extends State<CategoriesForUser> {
                 onTap: () {
                   Navigator.pop(context); // Close the drawer
                   // Implement logout functionality
+                  TextEditingController passwordController = TextEditingController();
+
                   showDialog(
                     context: context,
-                    builder: (context) => AlertDialog(
-                      backgroundColor: Colors.white,
-                      title: Text(
-                        'Delete Account'.tr,
-                        style: GoogleFonts.poppins(),
-                      ),
-                      content: Text('Are you sure you want to delete the account ?'.tr,
-                          style: GoogleFonts.poppins()),
-                      actions: [
-                        TextButton(
-                          onPressed: () {
-                            Navigator.pop(context);
-                          }, // Cancel logout
-                          child:
-                          Text('Cancel'.tr, style: GoogleFonts.poppins(color: Colors.red)),
+                    builder: (context) {
+                      bool _obscurePassword = true;
+                      return StatefulBuilder(
+                        builder: (context, setState) => AlertDialog(
+                          backgroundColor: Colors.white,
+                          title: Text(
+                            'Delete'.tr,
+                            style: GoogleFonts.poppins(fontWeight: FontWeight.bold),
+                          ),
+                          content: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Please Enter Your Password To Confirm Account Delete'.tr,
+                                style: GoogleFonts.poppins(),
+                              ),
+                              const SizedBox(height: 16),
+                              TextFormField(
+                                controller: passwordController,
+                                obscureText: _obscurePassword,
+                                decoration: InputDecoration(
+                                  prefixIcon: const Icon(Icons.lock_outline),
+                                  suffixIcon: IconButton(
+                                    icon: Icon(
+                                      _obscurePassword ? Icons.visibility_off : Icons.visibility,
+                                      color: Colors.blue,
+                                    ),
+                                    onPressed: () {
+                                      setState(() {
+                                        _obscurePassword = !_obscurePassword;
+                                      });
+                                    },
+                                  ),
+                                  hintText: 'Enter your password'.tr,
+                                  border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(10),
+                                    borderSide: const BorderSide(color: Colors.blue),
+                                  ),
+                                  enabledBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(10),
+                                    borderSide: const BorderSide(color: Colors.blue),
+                                  ),
+                                  focusedBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(10),
+                                    borderSide: const BorderSide(color: Colors.blue, width: 2),
+                                  ),
+                                  filled: true,
+                                  fillColor: Colors.grey[100],
+                                ),
+                              ),
+                            ],
+                          ),
+                          actions: [
+                            TextButton(
+                              onPressed: () {
+                                Navigator.pop(context);
+                              },
+                              child: Text(
+                                'Cancel'.tr,
+                                style: GoogleFonts.poppins(color: Colors.red),
+                              ),
+                            ),
+                            TextButton(
+                              onPressed: () async {
+                                if (passwordController.text.isEmpty) {
+                                  Get.snackbar("Alert", "Please Enter Your Password",
+                                      backgroundColor: Colors.red);
+                                } else {
+                                  Navigator.pop(context);
+                                  await userController.deleteAccount(passwordController.text);
+                                }
+                              },
+                              child: Text(
+                                'Delete'.tr,
+                                style: GoogleFonts.poppins(color: Colors.blue),
+                              ),
+                            ),
+                          ],
                         ),
-                        TextButton(
-                          onPressed: () async {
-                            // Confirm logout
-                            Navigator.pop(context); // Close dialog
-                            // Redirect or clear user data
-                            await userController.deleteAccount();
-
-                          },
-                          child:
-                          Text('Delete'.tr, style: GoogleFonts.poppins(color: Colors.blue)),
-                        ),
-                      ],
-                    ),
+                      );
+                    },
                   );
+
                 },
               ),
               ListTile(

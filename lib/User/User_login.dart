@@ -157,7 +157,7 @@ class _UserLoginState extends State<UserLogin> {
                         ),
 
                         // Login With Email
-                        GestureDetector(
+                        /*GestureDetector(
                           onTap: () {
                             Get.toNamed("/UserLoginEmail");
                           },
@@ -182,7 +182,7 @@ class _UserLoginState extends State<UserLogin> {
                               ),
                             ),
                           ),
-                        ),
+                        ),*/
 
                         // Login With Phone
                         GestureDetector(
@@ -248,7 +248,7 @@ class _UserLoginState extends State<UserLogin> {
                                           ),
                                         ),
                                         SizedBox(height: 10),
-                                        GestureDetector(
+                                      /*  GestureDetector(
                                           onTap: () {
                                             Get.toNamed("/user_singup_email");
                                           },
@@ -273,7 +273,7 @@ class _UserLoginState extends State<UserLogin> {
                                               ),
                                             ),
                                           ),
-                                        ),
+                                        ),*/
                                         SizedBox(height: 10),
                                         GestureDetector(
                                           onTap: () {

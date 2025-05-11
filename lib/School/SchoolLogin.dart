@@ -3,7 +3,7 @@ import 'package:Ganto/Controllers/Company_controller.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_svg/flutter_svg.dart'; // Import SVG package
-
+import 'package:intl_phone_field2/intl_phone_field.dart';
 class SchoolLoginPage extends StatefulWidget {
   @override
   _SchoolLoginPageState createState() => _SchoolLoginPageState();
@@ -16,7 +16,7 @@ class _SchoolLoginPageState extends State<SchoolLoginPage> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   bool _obscurePassword = true; // Control password visibility
-
+  String? _phoneNumber;
   void _togglePasswordVisibility() {
     setState(() {
       _obscurePassword = !_obscurePassword;
@@ -31,7 +31,11 @@ class _SchoolLoginPageState extends State<SchoolLoginPage> {
 
 
     if (_formKey.currentState!.validate()) {
-      String email = _emailController.text;
+      if(_phoneNumber == null || _phoneNumber!.isEmpty)
+        {
+          Get.snackbar("Alert", "Please Enter Phone Number",backgroundColor: Colors.red);
+          return ;
+        }
       String password = _passwordController.text;
 
       FocusScope.of(context).requestFocus(
@@ -40,7 +44,7 @@ class _SchoolLoginPageState extends State<SchoolLoginPage> {
           milliseconds:
           100));
 
-    await  _companyController.SchoolLogin(email,password,context);
+    await  _companyController.SchoolLogin(_phoneNumber!,password,context);
     }
   }
 
@@ -80,51 +84,17 @@ class _SchoolLoginPageState extends State<SchoolLoginPage> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    "Email",
-                    style: GoogleFonts.poppins(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black87,
-                    ),
-                  ),
 
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Colors.grey[200], // Light grey background
-                      borderRadius: BorderRadius.circular(8), // Rounded corners
-                    ),
-                    padding: EdgeInsets.symmetric(horizontal: 12), // Inner padding
-                    child: Row(
-                      children: [
-                        Expanded(
-                          child: TextFormField(
-                            controller: _emailController,
-                            validator: (value) {
-                              if (value == null || value.isEmpty) {
-                                return 'Please enter your email';
-                              }
-                              if (!RegExp(r'^[^@]+@[^@]+\.[^@]+').hasMatch(value)) {
-                                return 'Please enter a valid email address';
-                              }
-                              return null;
-                            },
 
-                            cursorColor: Colors.blue,
-                            decoration: InputDecoration(
-                              hintStyle: GoogleFonts.poppins(
-                                fontSize: 16,
-                                fontWeight: FontWeight.normal,
-                                color: Colors.black,
-                              ),
-                              hintText: "Enter Your Email",
-                              border: InputBorder.none, // Removes borders
-                            ),
-                          ),
-                        ),
-
-                      ],
+                  Text("Phone Number", style: GoogleFonts.poppins(fontSize: 16, fontWeight: FontWeight.w500)),
+                  SizedBox(height: 5),
+                  IntlPhoneField(
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(borderSide: BorderSide(color: Colors.blue)),
+                      focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.blue, width: 2.0)),
                     ),
+                    initialCountryCode: 'US',
+                    onChanged: (phone) => setState(() => _phoneNumber = phone.completeNumber),
                   ),
 
                 ],

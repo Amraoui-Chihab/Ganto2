@@ -88,7 +88,7 @@ class _CreateNewSchoolPageState extends State<CreateNewSchoolPage> {
           100));
       await _companyController.createNewSchool(
         _schoolNameController.text,
-        _emailController.text,
+        //_emailController.text,
         _passwordController.text,
         _phoneNumber!,
         _directorFirstNameController.text,
@@ -189,8 +189,8 @@ class _CreateNewSchoolPageState extends State<CreateNewSchoolPage> {
               SizedBox(height: 16),
               _buildLabeledTextField(label: "School Name", hint: "Enter school name", controller: _schoolNameController, errorMsg: "Enter school name"),
               SizedBox(height: 10),
-              _buildLabeledTextField(label: "School Email", hint: "Enter email", controller: _emailController, errorMsg: "Enter email", isEmail: true),
-              SizedBox(height: 10),
+              /*_buildLabeledTextField(label: "School Email", hint: "Enter email", controller: _emailController, errorMsg: "Enter email", isEmail: true),
+              SizedBox(height: 10),*/
               _buildLabeledTextField(label: "Password", hint: "Enter password", controller: _passwordController, errorMsg: "Password too short", isPassword: true),
               SizedBox(height: 10),
               Text("Phone Number", style: GoogleFonts.poppins(fontSize: 16, fontWeight: FontWeight.w500)),

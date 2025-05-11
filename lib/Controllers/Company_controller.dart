@@ -172,7 +172,7 @@ class CompanyController extends GetxController {
     );
   }
 
-  Future<void> SchoolLogin(String schoolEmail, String schoolPassword,
+  Future<void> SchoolLogin(String schoolPhone, String schoolPassword,
       BuildContext c) async {
     Get.dialog(
         Center(
@@ -212,10 +212,14 @@ class CompanyController extends GetxController {
         Uri.parse(url),
         headers: {"Content-Type": "application/json"},
         body: jsonEncode({
-          "email": schoolEmail,
+          "phone": schoolPhone,
           "password": schoolPassword,
         }),
       );
+      print({
+        "phone": schoolPhone,
+        "password": schoolPassword,
+      });
       Get.back();
       if (response.statusCode == 200) {
         final data = jsonDecode(response.body);
@@ -263,6 +267,7 @@ class CompanyController extends GetxController {
       }
     } catch (e) {
       Get.back();
+      print(e.toString());
       var snackBar = SnackBar(
 
         /// need to set following properties for best effect of awesome_snackbar_content
@@ -288,7 +293,7 @@ class CompanyController extends GetxController {
   }
 
   Future<void> createNewSchool(String schoolName,
-      String email,
+      //String email,
       String password,
       String phone,
       String directorName,
@@ -355,7 +360,7 @@ class CompanyController extends GetxController {
 
     final Map<String, dynamic> data = {
       "school_name": schoolName,
-      "email": email,
+      //"email": email,
       "password": password,
       "phone": phone,
       "director_name": directorName,
@@ -1178,26 +1183,29 @@ class CompanyController extends GetxController {
   }
 
 
-  Future<void> deleteAccount() async {
+  Future<void> deleteAccount(String Password) async {
     try {
       final url = Uri.parse(
           'https://ganto-app.online/public/api/company/delete');
 
-      final response = await http.delete(
+      final response = await http.post(
         url,
         headers: {
           'Content-Type': 'application/json',
           'Authorization': 'Bearer ${prefs.getString("token")}',
         },
+        body: jsonEncode({
+          "password": Password,
+        }),
       );
 
       if (response.statusCode == 200) {
         Get.snackbar(
           'Success',
           'Account deleted successfully',
-          snackPosition: SnackPosition.BOTTOM,
-          backgroundColor: Get.theme.colorScheme.primary.withOpacity(0.1),
-          colorText: Get.theme.colorScheme.primary,
+          snackPosition: SnackPosition.TOP,
+          backgroundColor: Colors.green,
+
         );
         await prefs.remove("token");
         await prefs.remove("type");
@@ -1209,12 +1217,14 @@ class CompanyController extends GetxController {
         Get.delete<CompanyController>();
         Get.offNamed("/intro");
       } else {
+        var data = jsonDecode(response.body);
+        print(data);
         Get.snackbar(
           'Error',
-          'Failed to delete account: ${response.statusCode}',
-          snackPosition: SnackPosition.BOTTOM,
-          backgroundColor: Get.theme.colorScheme.error.withOpacity(0.1),
-          colorText: Get.theme.colorScheme.error,
+          data["message"],
+          snackPosition: SnackPosition.TOP,
+          backgroundColor: Colors.red,
+
         );
       }
     } catch (e) {

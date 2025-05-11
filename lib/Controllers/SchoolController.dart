@@ -1890,16 +1890,19 @@ class SchoolController extends GetxController {
   }
 
 
-  Future<void> deleteAccount() async {
+  Future<void> deleteAccount(String Password) async {
     try {
       final url = Uri.parse('https://ganto-app.online/public/api/DeleteSchool');
 
-      final response = await http.delete(
+      final response = await http.post(
         url,
         headers: {
           'Content-Type': 'application/json',
           'Authorization': 'Bearer ${prefs.getString("token2")}',
         },
+        body: jsonEncode({
+          "password":Password
+        })
       );
 
       if (response.statusCode == 200) {
@@ -1917,21 +1920,25 @@ class SchoolController extends GetxController {
         Get.delete<SchoolController>();
         Get.offNamed("/Company_Home");
       } else {
+        print(response.body);
+        var data = jsonDecode(response.body);
         Get.snackbar(
           'Error',
-          'Failed to delete account: ${response.statusCode}',
-          snackPosition: SnackPosition.BOTTOM,
-          backgroundColor: Get.theme.colorScheme.error.withOpacity(0.1),
-          colorText: Get.theme.colorScheme.error,
+          data["message"],
+          snackPosition: SnackPosition.TOP,
+          backgroundColor: Colors.red,
+
         );
       }
     } catch (e) {
+      print(e.toString());
       Get.snackbar(
         'Exception',
         'Something went wrong: $e',
-        snackPosition: SnackPosition.BOTTOM,
-        backgroundColor: Get.theme.colorScheme.error.withOpacity(0.1),
-        colorText: Get.theme.colorScheme.error,
+        snackPosition: SnackPosition.TOP,
+        backgroundColor: Colors.red,
+
+
       );
     }
   }

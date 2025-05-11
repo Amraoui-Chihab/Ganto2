@@ -157,7 +157,7 @@ class _CompanyLoginState extends State<CompanyLogin> {
                         ),
 
                         // Login With Email
-                        GestureDetector(
+                        /*GestureDetector(
                           onTap: () {
                              Get.toNamed("/CompanyLoginEmail");
                           },
@@ -182,7 +182,7 @@ class _CompanyLoginState extends State<CompanyLogin> {
                               ),
                             ),
                           ),
-                        ),
+                        ),*/
 
                         // Login With Phone
                         GestureDetector(
@@ -249,7 +249,7 @@ class _CompanyLoginState extends State<CompanyLogin> {
                                           ),
                                         ),
                                         SizedBox(height: 10),
-                                        GestureDetector(
+                                       /* GestureDetector(
                                           onTap: () {
                                             Get.toNamed("/company_singup_email");
                                           },
@@ -274,7 +274,7 @@ class _CompanyLoginState extends State<CompanyLogin> {
                                               ),
                                             ),
                                           ),
-                                        ),
+                                        ),*/
                                         SizedBox(height: 10),
                                         GestureDetector(
                                           onTap: () {

@@ -1,7 +1,7 @@
 class School {
   final int schoolId;
   final String schoolName;
-  final String schoolEmail;
+  final String? schoolEmail;
   final String schoolPhone;
   final String directorName;
   final String directorLastname;
