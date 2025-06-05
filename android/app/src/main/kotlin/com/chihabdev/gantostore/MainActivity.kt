@@ -1,4 +1,4 @@
-package com.gantoapp.store
+package com.chihabdev.gantostore
 
 
 import io.flutter.embedding.android.FlutterActivity
